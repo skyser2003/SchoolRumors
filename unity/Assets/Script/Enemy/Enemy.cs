@@ -6,18 +6,23 @@ public class Enemy : MonoBehaviour
 {
     public GameObject wayPoints;
     Vector3[] wayPointPositions;
+    Vector3 chaseTarget;
     NavMeshAgent agent;
     int currentDestination;
 
     const float requiredDistance = 0.1f;
 
     bool isFacingRight;
+    bool isTouching;
     Transform graphics;
 
     PatrolState currentState;
 
     float walkSpeed = 2.0f;
     float chaseSpeed = 3.0f;
+
+    bool isWaiting;
+    float waitTimer;
 
     enum PatrolState
     {
@@ -84,9 +89,12 @@ public class Enemy : MonoBehaviour
 
     bool IsCloseEnough(Vector3 target)
     {
-        Vector3 enemyPos = new Vector3(transform.position.x, 0.0f, transform.position.z);
-        Vector3 targetPos = new Vector3(target.x, 0.0f, target.z);
-        return Vector3.Distance(enemyPos, targetPos) < requiredDistance;
+        Debug.DrawLine(transform.position, target, Color.blue);
+
+        Vector2 enemyPos = new Vector2(transform.position.x, transform.position.z);
+        Vector2 targetPos = new Vector2(target.x, target.z);
+        float distance = Vector2.Distance(enemyPos, targetPos);
+        return distance < requiredDistance;
     }
 
     bool Look()
@@ -96,6 +104,29 @@ public class Enemy : MonoBehaviour
         float seeDistance = currentState == PatrolState.patrol ? 10.0f : 20.0f;
         float arcAngle = currentState == PatrolState.patrol ? 35.0f : 220.0f;
         int numLines = currentState == PatrolState.patrol ? 16 : 64;
+        isTouching = false;
+
+        Collider[] cols = Physics.OverlapSphere(transform.position, currentState == PatrolState.patrol ? 1.33f : 1.8f);
+        for (int i = 0; i < cols.Length; ++i)
+        {
+            if (cols[i].transform.tag == "Player")
+            {
+                if (Physics.Linecast(transform.position + Vector3.up, cols[i].transform.position, out hit))
+                {
+                    if (hit.transform.tag == "Player")
+                    {
+                        Debug.DrawLine(rayOrigin, hit.point, Color.red);
+                        OnSpotPlayer(hit.transform);
+                        isTouching = true;
+                        return true;
+                    }
+                    else
+                    {
+                        Debug.DrawLine(rayOrigin, hit.point, Color.yellow);
+                    }
+                }
+            }
+        }
 
         for (int i = 0; i < numLines; ++i)
         {
@@ -126,18 +157,28 @@ public class Enemy : MonoBehaviour
     {
         Debug.DrawLine(transform.position + Vector3.up, agent.destination + Vector3.up, Color.red);
 
-        agent.speed = chaseSpeed;
+        agent.SetDestination(chaseTarget);
+        agent.speed = isWaiting ? 0.0f : chaseSpeed;
         bool spotted = Look();
 
-        if (IsCloseEnough(agent.destination))
+        if(isWaiting)
         {
-            if(spotted)
+            if (!spotted && Time.time > waitTimer)
+            {
+                isWaiting = false;
+                currentState = PatrolState.patrol;
+            }
+        }
+        else if (IsCloseEnough(agent.destination) || isTouching)
+        {
+            if(spotted || isTouching)
             {
                 OnPlayerCollision();
             }
             else
             {
-                currentState = PatrolState.patrol;
+                isWaiting = true;
+                waitTimer = Time.time + 0.5f;
             }
             
         }
@@ -151,7 +192,7 @@ public class Enemy : MonoBehaviour
     public virtual void OnSpotPlayer(Transform player)
     {
         currentState = PatrolState.chase;
-        agent.SetDestination(player.position);
+        chaseTarget = player.position;
     }
 
     void LateUpdate()
