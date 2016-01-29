@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
     public GameObject wayPoints;
     Vector3[] wayPointPositions;
     Vector3 chaseTarget;
-    NavMeshAgent agent;
+    protected NavMeshAgent agent;
     int currentDestination;
 
     const float requiredDistance = 0.1f;
