@@ -26,6 +26,8 @@ public class Enemy : MonoBehaviour
 
     PlayerUI playerUI;
 
+    float raycastHeight = 0.5f;
+
     enum PatrolState
     {
         patrol,
@@ -103,7 +105,7 @@ public class Enemy : MonoBehaviour
     bool Look()
     {
         RaycastHit hit;
-        Vector3 rayOrigin = transform.position + Vector3.up;
+        Vector3 rayOrigin = transform.position + Vector3.up * raycastHeight;
         float seeDistance = currentState == PatrolState.patrol ? 10.0f : 20.0f;
         float arcAngle = currentState == PatrolState.patrol ? 35.0f : 220.0f;
         int numLines = currentState == PatrolState.patrol ? 16 : 64;
@@ -114,7 +116,7 @@ public class Enemy : MonoBehaviour
         {
             if (cols[i].transform.tag == "Player")
             {
-                if (Physics.Linecast(transform.position + Vector3.up, cols[i].transform.position, out hit))
+                if (Physics.Linecast(transform.position + Vector3.up * raycastHeight, cols[i].transform.position, out hit))
                 {
                     if (hit.transform.tag == "Player")
                     {
@@ -158,7 +160,7 @@ public class Enemy : MonoBehaviour
 
     void Chase()
     {
-        Debug.DrawLine(transform.position + Vector3.up, agent.destination + Vector3.up, Color.red);
+        Debug.DrawLine(transform.position + Vector3.up * raycastHeight, agent.destination + Vector3.up * raycastHeight, Color.red);
 
         agent.SetDestination(chaseTarget);
         agent.speed = isWaiting ? 0.0f : chaseSpeed;

@@ -31,15 +31,12 @@ public class PlayerUI : MonoBehaviour
 
             for(int i = 0; i < healthSprites.Length; ++i)
             {
-                Debug.Log(health >= i);
                 healthSprites[i].SetActive(health >= i);
             }
 
             if (health < 0)
             {
-                Debug.Log("Game over!");
-                // TODO: Implement game over
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                GameProgressManager.Instance.GameOver();
             }
         }
     }

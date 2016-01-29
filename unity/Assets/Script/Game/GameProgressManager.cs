@@ -20,6 +20,7 @@ class GameProgressManager {
     {
         // TODO
         Debug.Log("Game over");
+        RestartCurrentLevel();
     }
 
     public void RestartCurrentLevel()

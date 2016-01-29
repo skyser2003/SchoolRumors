@@ -6,9 +6,7 @@ public class Guard : Enemy
 {
     public override void OnSpotPlayer(Transform player)
     {
-        Debug.Log("Game over!");
-        // TODO: Implement game over
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        GameProgressManager.Instance.GameOver();
 
         agent.enabled = false;
         enabled = false;
