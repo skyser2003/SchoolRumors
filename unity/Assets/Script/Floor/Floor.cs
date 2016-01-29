@@ -13,18 +13,14 @@ class Floor : MonoBehaviour {
 
     private bool CheckCondition(Player player)
     {
-        if (player.Inventory.Count == FloorItemCount) {
-            return true;
-        }
-        else {
-            return false;
-        }
+        return player.Inventory.Count == FloorItemCount;
     }
 
     public void ProceedToNextFloor(Player player)
     {
-        if (CheckCondition(player) == true) {
+        if (CheckCondition(player) == false) {
             // TODO : show error message
+            Debug.Log("Item count condition not met : Current item count = " + player.Inventory.Count + ", required item count = " + FloorItemCount);
         }
         else {
             SceneManager.LoadScene("Stage" + (StageLevel + 1));

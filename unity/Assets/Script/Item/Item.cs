@@ -5,7 +5,8 @@ class Item : MonoBehaviour {
     {
         var player = collider.gameObject.GetComponent<Player>();
         if (player != null) {
-
+            player.AcquireItem(this);
+            transform.localPosition = new Vector3(-9999, -9999, -9999);
         }
     }
 }
