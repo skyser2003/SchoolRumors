@@ -24,6 +24,8 @@ public class Enemy : MonoBehaviour
     bool isWaiting;
     float waitTimer;
 
+    PlayerUI playerUI;
+
     enum PatrolState
     {
         patrol,
@@ -35,6 +37,7 @@ public class Enemy : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         graphics = transform.FindChild("Graphics");
         currentState = PatrolState.patrol;
+        playerUI = GameObject.FindWithTag("UI").GetComponent<PlayerUI>();
 
         if (wayPoints == null)
         {
@@ -186,7 +189,7 @@ public class Enemy : MonoBehaviour
 
     void OnPlayerCollision()
     {
-        Debug.Log("Hit");
+        playerUI.TakeDamage();
     }
 
     public virtual void OnSpotPlayer(Transform player)
