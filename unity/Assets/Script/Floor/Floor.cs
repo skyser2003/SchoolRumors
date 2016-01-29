@@ -23,6 +23,7 @@ class Floor : MonoBehaviour {
             Debug.Log("Item count condition not met : Current item count = " + player.Inventory.Count + ", required item count = " + FloorItemCount);
         }
         else {
+            Debug.Log("Proceed to next level!");
             SceneManager.LoadScene("Stage" + (StageLevel + 1));
         }
     }
