@@ -2,15 +2,20 @@
 using System.Collections;
 
 public class PlayerMovement : MonoBehaviour {
+    private CharacterController control;
     private Vector3 direction = new Vector3();
 
     public float Speed;
 
+    private void Start()
+    {
+        control = GetComponent<CharacterController>();
+    }
+
     private void FixedUpdate()
     {
         var dt = Time.fixedDeltaTime;
-
-        transform.localPosition += direction * Speed * dt;
+        control.Move(direction * Speed * dt);
     }
 
     private void Update()
