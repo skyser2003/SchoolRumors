@@ -16,6 +16,9 @@ public class Enemy : MonoBehaviour
 
     PatrolState currentState;
 
+    float walkSpeed = 2.0f;
+    float chaseSpeed = 3.0f;
+
     enum PatrolState
     {
         patrol,
@@ -66,12 +69,10 @@ public class Enemy : MonoBehaviour
 
     void Patrol()
     {
+        agent.speed = walkSpeed;
         agent.SetDestination(wayPointPositions[currentDestination]);
 
-        Vector3 enemyPos = new Vector3(transform.position.x, 0.0f, transform.position.z);
-        Vector3 targetPos = new Vector3(agent.destination.x, 0.0f, agent.destination.z);
-
-        if (Vector3.Distance(enemyPos, targetPos) < requiredDistance)
+        if (IsCloseEnough(agent.destination))
         {
             currentDestination++;
             if (currentDestination >= wayPointPositions.Length)
@@ -81,13 +82,20 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    void Look()
+    bool IsCloseEnough(Vector3 target)
+    {
+        Vector3 enemyPos = new Vector3(transform.position.x, 0.0f, transform.position.z);
+        Vector3 targetPos = new Vector3(target.x, 0.0f, target.z);
+        return Vector3.Distance(enemyPos, targetPos) < requiredDistance;
+    }
+
+    bool Look()
     {
         RaycastHit hit;
         Vector3 rayOrigin = transform.position + Vector3.up;
-        float seeDistance = 5.0f;
-        float arcAngle = 30.0f;
-        int numLines = 16;
+        float seeDistance = currentState == PatrolState.patrol ? 10.0f : 20.0f;
+        float arcAngle = currentState == PatrolState.patrol ? 35.0f : 220.0f;
+        int numLines = currentState == PatrolState.patrol ? 16 : 64;
 
         for (int i = 0; i < numLines; ++i)
         {
@@ -100,7 +108,8 @@ public class Enemy : MonoBehaviour
                 if(hit.transform.tag == "Player")
                 {
                     Debug.DrawLine(rayOrigin, hit.point, Color.red);
-                    OnSpotPlayer();
+                    OnSpotPlayer(hit.transform);
+                    return true;
                 }
             }
             else
@@ -108,17 +117,41 @@ public class Enemy : MonoBehaviour
                 Debug.DrawLine(rayOrigin, rayOrigin + rayDirection * seeDistance, Color.green);
             }
         }
+
+        return false;
         
     }
 
     void Chase()
     {
+        Debug.DrawLine(transform.position + Vector3.up, agent.destination + Vector3.up, Color.red);
 
+        agent.speed = chaseSpeed;
+        bool spotted = Look();
+
+        if (IsCloseEnough(agent.destination))
+        {
+            if(spotted)
+            {
+                OnPlayerCollision();
+            }
+            else
+            {
+                currentState = PatrolState.patrol;
+            }
+            
+        }
     }
 
-    public virtual void OnSpotPlayer()
+    void OnPlayerCollision()
+    {
+        Debug.Log("Hit");
+    }
+
+    public virtual void OnSpotPlayer(Transform player)
     {
         currentState = PatrolState.chase;
+        agent.SetDestination(player.position);
     }
 
     void LateUpdate()
