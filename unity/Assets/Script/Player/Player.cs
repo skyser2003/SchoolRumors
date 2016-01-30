@@ -14,10 +14,12 @@ class Player : MonoBehaviour {
         set
         {
             var prevItem = handheldItem;
-
             handheldItem = value;
-            var arm = transform.Find("Graphics/Quad");
+
+            var arm = transform.Find("Hand");
+
             handheldItem.transform.parent = arm;
+            handheldItem.transform.localPosition = new Vector3(0, 0, 0);
             HandheldItemManager.Instance.Remove(handheldItem);
 
             if (prevItem != null) {
