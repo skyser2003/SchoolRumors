@@ -2,20 +2,46 @@
 
 class PlayerCamera : MonoBehaviour {
 
-    public Player player;
-    public Vector3 DeltaVector;
-    public float PosFactor = 0.5f;
-    public Vector3 DeltaLookVector;
+    public Transform mainCamera;
+    public BoxCollider cameraArea;
+    public Transform player;
+    PlayerMovement playerScript;
 
-    private void FixedUpdate()
+    void Start()
     {
-        Vector3 newpos = Vector3.Lerp(transform.position, player.transform.position + DeltaVector, PosFactor);
-        transform.position = newpos;
+        transform.position = player.position;
+        playerScript = player.GetComponent<PlayerMovement>();
     }
 
-    void LateUpdate()
+    void FixedUpdate()
     {
-        //look at
-        transform.LookAt(player.transform.position + DeltaLookVector);
+        Bounds bounds = cameraArea.bounds;
+        Vector3 target = transform.position;
+
+        if (player.position.x > bounds.max.x )
+        {
+            target.x += playerScript.Speed * Time.fixedDeltaTime;
+        }
+        else if(player.position.x < bounds.min.x)
+        {
+            target.x -= playerScript.Speed * Time.fixedDeltaTime;
+        }
+
+        if (player.position.z > bounds.max.z)
+        {
+            target.z += playerScript.Speed * Time.fixedDeltaTime;
+        }
+        else if (player.position.z < bounds.min.z)
+        {
+            target.z -= playerScript.Speed * Time.fixedDeltaTime;
+        }
+
+        transform.position = target;
+
+        mainCamera.localEulerAngles = new Vector3(
+            mainCamera.localEulerAngles.x,
+            (player.position.x - transform.position.x) * 3.0f,
+            mainCamera.localEulerAngles.z);
     }
+
 }
