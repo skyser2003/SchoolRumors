@@ -85,6 +85,60 @@ NavMeshSettings:
     cellSize: 0.1
     manualCellSize: 0
   m_NavMeshData: {fileID: 23800000, guid: 8ebc3bee0a07cbb47ada888101caed79, type: 2}
+--- !u!1001 &4428724
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 220729716}
+    m_Modifications:
+    - target: {fileID: 466602, guid: 5ac7e076cb113e5479cea6705af5d1ec, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1002.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 466602, guid: 5ac7e076cb113e5479cea6705af5d1ec, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 466602, guid: 5ac7e076cb113e5479cea6705af5d1ec, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.006
+      objectReference: {fileID: 0}
+    - target: {fileID: 466602, guid: 5ac7e076cb113e5479cea6705af5d1ec, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 466602, guid: 5ac7e076cb113e5479cea6705af5d1ec, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 466602, guid: 5ac7e076cb113e5479cea6705af5d1ec, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 466602, guid: 5ac7e076cb113e5479cea6705af5d1ec, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 466602, guid: 5ac7e076cb113e5479cea6705af5d1ec, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 466602, guid: 5ac7e076cb113e5479cea6705af5d1ec, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 466602, guid: 5ac7e076cb113e5479cea6705af5d1ec, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 466602, guid: 5ac7e076cb113e5479cea6705af5d1ec, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 5ac7e076cb113e5479cea6705af5d1ec, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &9590323
 GameObject:
   m_ObjectHideFlags: 0
@@ -1062,6 +1116,7 @@ MonoBehaviour:
   item: {fileID: 0}
   HealAmount: 0
   DelayTime: 0
+  EmptyTextShow: Desk Is Empty
 --- !u!1 &127811775
 GameObject:
   m_ObjectHideFlags: 0
@@ -1379,6 +1434,7 @@ MonoBehaviour:
   item: {fileID: 0}
   HealAmount: 0
   DelayTime: 0
+  EmptyTextShow: Desk Is Empty
 --- !u!1001 &145475632
 Prefab:
   m_ObjectHideFlags: 0
@@ -1507,6 +1563,7 @@ MonoBehaviour:
   item: {fileID: 0}
   HealAmount: 0
   DelayTime: 0
+  EmptyTextShow: Desk Is Empty
 --- !u!114 &162439233 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11467338, guid: cadf8b876608477458d15fa74253421d,
@@ -1530,7 +1587,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 454476, guid: 3d523b375bc54db4daab9f0fa429363a, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0.33
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 454476, guid: 3d523b375bc54db4daab9f0fa429363a, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1563,6 +1620,10 @@ Prefab:
     - target: {fileID: 471664, guid: 3d523b375bc54db4daab9f0fa429363a, type: 2}
       propertyPath: m_LocalPosition.x
       value: -998.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 471664, guid: 3d523b375bc54db4daab9f0fa429363a, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3d523b375bc54db4daab9f0fa429363a, type: 2}
@@ -2358,6 +2419,30 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 455840, guid: 8736b4eda544ae6469f5cd18a829091b, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 422538, guid: 8736b4eda544ae6469f5cd18a829091b, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 431846, guid: 8736b4eda544ae6469f5cd18a829091b, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 433274, guid: 8736b4eda544ae6469f5cd18a829091b, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 414888, guid: 8736b4eda544ae6469f5cd18a829091b, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 494854, guid: 8736b4eda544ae6469f5cd18a829091b, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8736b4eda544ae6469f5cd18a829091b, type: 2}
   m_IsPrefabParent: 0
@@ -2511,6 +2596,7 @@ MonoBehaviour:
   item: {fileID: 0}
   HealAmount: 0
   DelayTime: 1
+  EmptyTextShow: Desk Is Empty
 --- !u!1 &241407834
 GameObject:
   m_ObjectHideFlags: 0
@@ -2660,6 +2746,7 @@ MonoBehaviour:
   item: {fileID: 273894548}
   HealAmount: 0
   DelayTime: 0
+  EmptyTextShow: Desk Is Empty
 --- !u!1001 &265305090
 Prefab:
   m_ObjectHideFlags: 0
@@ -2677,7 +2764,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 454476, guid: 3d523b375bc54db4daab9f0fa429363a, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0.477
+      value: 0.006
       objectReference: {fileID: 0}
     - target: {fileID: 454476, guid: 3d523b375bc54db4daab9f0fa429363a, type: 2}
       propertyPath: m_LocalRotation.x
@@ -2697,7 +2784,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 454476, guid: 3d523b375bc54db4daab9f0fa429363a, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 471664, guid: 3d523b375bc54db4daab9f0fa429363a, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2710,6 +2797,10 @@ Prefab:
     - target: {fileID: 471664, guid: 3d523b375bc54db4daab9f0fa429363a, type: 2}
       propertyPath: m_LocalPosition.x
       value: 1001.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 471664, guid: 3d523b375bc54db4daab9f0fa429363a, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3d523b375bc54db4daab9f0fa429363a, type: 2}
@@ -3467,6 +3558,7 @@ MonoBehaviour:
   item: {fileID: 0}
   HealAmount: 0
   DelayTime: 1
+  EmptyTextShow: Desk Is Empty
 --- !u!1 &354340234
 GameObject:
   m_ObjectHideFlags: 0
@@ -3883,7 +3975,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 454476, guid: 3d523b375bc54db4daab9f0fa429363a, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0.33
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 454476, guid: 3d523b375bc54db4daab9f0fa429363a, type: 2}
       propertyPath: m_LocalRotation.x
@@ -3911,11 +4003,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 471664, guid: 3d523b375bc54db4daab9f0fa429363a, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.25
       objectReference: {fileID: 0}
     - target: {fileID: 471664, guid: 3d523b375bc54db4daab9f0fa429363a, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -998.53
+      value: 972.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 471664, guid: 3d523b375bc54db4daab9f0fa429363a, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3d523b375bc54db4daab9f0fa429363a, type: 2}
@@ -3976,6 +4072,7 @@ MonoBehaviour:
   item: {fileID: 0}
   HealAmount: 0
   DelayTime: 1
+  EmptyTextShow: Desk Is Empty
 --- !u!1 &395986269
 GameObject:
   m_ObjectHideFlags: 0
@@ -4306,6 +4403,7 @@ MonoBehaviour:
   item: {fileID: 0}
   HealAmount: 1
   DelayTime: 0
+  EmptyTextShow: Desk Is Empty
 --- !u!1001 &421271365
 Prefab:
   m_ObjectHideFlags: 0
@@ -4434,6 +4532,7 @@ MonoBehaviour:
   item: {fileID: 0}
   HealAmount: 0
   DelayTime: 0
+  EmptyTextShow: Desk Is Empty
 --- !u!1 &427987605
 GameObject:
   m_ObjectHideFlags: 0
@@ -4588,6 +4687,7 @@ MonoBehaviour:
   item: {fileID: 0}
   HealAmount: 0
   DelayTime: 1
+  EmptyTextShow: Desk Is Empty
 --- !u!1 &451736536
 GameObject:
   m_ObjectHideFlags: 0
@@ -5033,6 +5133,7 @@ MonoBehaviour:
   item: {fileID: 0}
   HealAmount: 0
   DelayTime: 1
+  EmptyTextShow: Desk Is Empty
 --- !u!1 &479051028
 GameObject:
   m_ObjectHideFlags: 0
@@ -5089,6 +5190,7 @@ MonoBehaviour:
   item: {fileID: 0}
   HealAmount: 0
   DelayTime: 1
+  EmptyTextShow: Desk Is Empty
 --- !u!1 &495663797
 GameObject:
   m_ObjectHideFlags: 0
@@ -5211,6 +5313,7 @@ MonoBehaviour:
   item: {fileID: 0}
   HealAmount: 0
   DelayTime: 1
+  EmptyTextShow: Desk Is Empty
 --- !u!1 &503949849
 GameObject:
   m_ObjectHideFlags: 0
@@ -5269,6 +5372,7 @@ MonoBehaviour:
   item: {fileID: 0}
   HealAmount: 1
   DelayTime: 0
+  EmptyTextShow: Desk Is Empty
 --- !u!1 &536323114
 GameObject:
   m_ObjectHideFlags: 0
@@ -7394,7 +7498,7 @@ Prefab:
       objectReference: {fileID: 967244799}
     - target: {fileID: 172878, guid: a64e27b4fa3f519469c89071ba0f16f1, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11472596, guid: a64e27b4fa3f519469c89071ba0f16f1, type: 2}
       propertyPath: PatrolSeeDistance
@@ -8795,6 +8899,7 @@ MonoBehaviour:
   item: {fileID: 624616769}
   HealAmount: 0
   DelayTime: 1
+  EmptyTextShow: Desk Is Empty
 --- !u!1 &856661657
 GameObject:
   m_ObjectHideFlags: 0
@@ -10994,6 +11099,48 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1011989739}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1014517547
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1925358589}
+    m_Modifications:
+    - target: {fileID: 453110, guid: 8afce8faa78c9cc48a6dc1ab84549d51, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 970.6599
+      objectReference: {fileID: 0}
+    - target: {fileID: 453110, guid: 8afce8faa78c9cc48a6dc1ab84549d51, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 453110, guid: 8afce8faa78c9cc48a6dc1ab84549d51, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 453110, guid: 8afce8faa78c9cc48a6dc1ab84549d51, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 453110, guid: 8afce8faa78c9cc48a6dc1ab84549d51, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 453110, guid: 8afce8faa78c9cc48a6dc1ab84549d51, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 453110, guid: 8afce8faa78c9cc48a6dc1ab84549d51, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 453110, guid: 8afce8faa78c9cc48a6dc1ab84549d51, type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 8afce8faa78c9cc48a6dc1ab84549d51, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1017211111
 GameObject:
   m_ObjectHideFlags: 0
@@ -11630,7 +11777,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22431946, guid: baa6f48d4df60c84981b741a5118e5c0, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 22431946, guid: baa6f48d4df60c84981b741a5118e5c0, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -11672,10 +11819,6 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 170274, guid: baa6f48d4df60c84981b741a5118e5c0, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 11464440, guid: baa6f48d4df60c84981b741a5118e5c0, type: 2}
       propertyPath: m_Color.r
       value: 1
@@ -11685,18 +11828,6 @@ Prefab:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11464440, guid: baa6f48d4df60c84981b741a5118e5c0, type: 2}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11457172, guid: baa6f48d4df60c84981b741a5118e5c0, type: 2}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11457172, guid: baa6f48d4df60c84981b741a5118e5c0, type: 2}
-      propertyPath: m_Color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11457172, guid: baa6f48d4df60c84981b741a5118e5c0, type: 2}
       propertyPath: m_Color.b
       value: 0
       objectReference: {fileID: 0}
@@ -11943,6 +12074,7 @@ MonoBehaviour:
   item: {fileID: 273894548}
   HealAmount: 0
   DelayTime: 1
+  EmptyTextShow: Desk Is Empty
 --- !u!1 &1134601036
 GameObject:
   m_ObjectHideFlags: 0
@@ -12497,6 +12629,7 @@ MonoBehaviour:
   item: {fileID: 0}
   HealAmount: 0
   DelayTime: 0
+  EmptyTextShow: Desk Is Empty
 --- !u!1 &1177939994
 GameObject:
   m_ObjectHideFlags: 0
@@ -12555,6 +12688,7 @@ MonoBehaviour:
   item: {fileID: 0}
   HealAmount: 1
   DelayTime: 1
+  EmptyTextShow: Desk Is Empty
 --- !u!1001 &1180019886
 Prefab:
   m_ObjectHideFlags: 0
@@ -13464,6 +13598,7 @@ MonoBehaviour:
   item: {fileID: 0}
   HealAmount: 0
   DelayTime: 0
+  EmptyTextShow: Desk Is Empty
 --- !u!1 &1312584799
 GameObject:
   m_ObjectHideFlags: 0
@@ -13788,6 +13923,7 @@ MonoBehaviour:
   item: {fileID: 0}
   HealAmount: 0
   DelayTime: 1
+  EmptyTextShow: Desk Is Empty
 --- !u!1 &1337904729
 GameObject:
   m_ObjectHideFlags: 0
@@ -14506,6 +14642,7 @@ MonoBehaviour:
   item: {fileID: 0}
   HealAmount: 0
   DelayTime: 0
+  EmptyTextShow: Desk Is Empty
 --- !u!1 &1373340924
 GameObject:
   m_ObjectHideFlags: 0
@@ -14774,6 +14911,7 @@ MonoBehaviour:
   item: {fileID: 0}
   HealAmount: 0
   DelayTime: 1
+  EmptyTextShow: Desk Is Empty
 --- !u!1 &1399127978
 GameObject:
   m_ObjectHideFlags: 0
@@ -15521,6 +15659,7 @@ MonoBehaviour:
   item: {fileID: 0}
   HealAmount: 0
   DelayTime: 1
+  EmptyTextShow: Desk Is Empty
 --- !u!1 &1458226148
 GameObject:
   m_ObjectHideFlags: 0
@@ -15841,6 +15980,7 @@ MonoBehaviour:
   item: {fileID: 0}
   HealAmount: 0
   DelayTime: 1
+  EmptyTextShow: Desk Is Empty
 --- !u!65 &1476777063
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16272,8 +16412,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2daa103bd1b43254bac49bf11b00b428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DelayTime: 0
-  ConditionTextShow: You need all ritual items to go to the next floor
+  DelayTime: 3
+  ConditionTextShow: Get Canvas to open door
   FloorLevel: 2
 --- !u!1 &1506430879
 GameObject:
@@ -16866,6 +17006,7 @@ MonoBehaviour:
   item: {fileID: 0}
   HealAmount: 0
   DelayTime: 1
+  EmptyTextShow: Desk Is Empty
 --- !u!1 &1555476983
 GameObject:
   m_ObjectHideFlags: 0
@@ -16986,6 +17127,7 @@ MonoBehaviour:
   item: {fileID: 0}
   HealAmount: 0
   DelayTime: 1
+  EmptyTextShow: Desk Is Empty
 --- !u!1 &1562052801
 GameObject:
   m_ObjectHideFlags: 0
@@ -17122,6 +17264,7 @@ MonoBehaviour:
   item: {fileID: 0}
   HealAmount: 0
   DelayTime: 0
+  EmptyTextShow: Desk Is Empty
 --- !u!1 &1566187425
 GameObject:
   m_ObjectHideFlags: 0
@@ -17533,6 +17676,7 @@ MonoBehaviour:
   item: {fileID: 273894548}
   HealAmount: 0
   DelayTime: 0
+  EmptyTextShow: Desk Is Empty
 --- !u!1 &1616917585
 GameObject:
   m_ObjectHideFlags: 0
@@ -17676,6 +17820,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1417178348}
   m_RootOrder: 1
+--- !u!1 &1651382778 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 122284, guid: 3d523b375bc54db4daab9f0fa429363a, type: 2}
+  m_PrefabInternal: {fileID: 265305090}
+--- !u!114 &1651382780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1651382778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037fe76721687984fbe8d053cc161f4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cutsceneSlides: []
+  isLastCutscene: 0
 --- !u!1 &1669705493
 GameObject:
   m_ObjectHideFlags: 0
@@ -18506,6 +18667,7 @@ MonoBehaviour:
   item: {fileID: 0}
   HealAmount: 0
   DelayTime: 0
+  EmptyTextShow: Desk Is Empty
 --- !u!1001 &1770953786
 Prefab:
   m_ObjectHideFlags: 0
@@ -20223,6 +20385,7 @@ MonoBehaviour:
   item: {fileID: 0}
   HealAmount: 0
   DelayTime: 0
+  EmptyTextShow: Desk Is Empty
 --- !u!1001 &1925358588
 Prefab:
   m_ObjectHideFlags: 0
@@ -20429,6 +20592,7 @@ MonoBehaviour:
   item: {fileID: 0}
   HealAmount: 0
   DelayTime: 0
+  EmptyTextShow: Desk Is Empty
 --- !u!1001 &1936605025
 Prefab:
   m_ObjectHideFlags: 0
@@ -20747,7 +20911,7 @@ Transform:
   - {fileID: 737720544}
   - {fileID: 1399428678}
   m_Father: {fileID: 220729716}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!1 &1961667142
 GameObject:
   m_ObjectHideFlags: 0
@@ -21273,6 +21437,7 @@ MonoBehaviour:
   item: {fileID: 0}
   HealAmount: 0
   DelayTime: 1
+  EmptyTextShow: Desk Is Empty
 --- !u!1001 &2013244027
 Prefab:
   m_ObjectHideFlags: 0
@@ -21455,6 +21620,7 @@ MonoBehaviour:
   item: {fileID: 0}
   HealAmount: 0
   DelayTime: 0
+  EmptyTextShow: Desk Is Empty
 --- !u!1001 &2031341030
 Prefab:
   m_ObjectHideFlags: 0
@@ -21990,7 +22156,7 @@ Transform:
   m_Children:
   - {fileID: 395986270}
   m_Father: {fileID: 220729716}
-  m_RootOrder: 7
+  m_RootOrder: 8
 --- !u!114 &2106233836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22003,7 +22169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DelayTime: 0
-  ConditionTextShow: You need all ritual items to go to the next floor
+  ConditionTextShow: Get diary to unlock the door
   FloorLevel: 1
 --- !u!1 &2119675222
 GameObject:
