@@ -24,7 +24,7 @@ class PlayerAction : MonoBehaviour {
             if (playerMove.Direction.magnitude == 0) {
                 curSearchTime -= dt;
                 if (curSearchTime <= 0) {
-                    searchingObject.GiveItem(player);
+                    searchingObject.Action(player);
                 }
             }
             // Cancel
