@@ -105,6 +105,7 @@ public class PlayerMovement : MonoBehaviour {
         newHandPosition.x = Mathf.Abs(rightHand.localPosition.x) * (isFacingRight == true ? 1 : -1);
 
         rightHand.localPosition = newHandPosition;
+        rightHand.localScale = new Vector3(isFacingRight == true ? 1 : -1, 1, 1);
     }
 
     float animV;

@@ -18,13 +18,25 @@ class Player : MonoBehaviour {
 
             var arm = transform.Find("Hand");
 
+            // Temporarily set to right direction
+            float direction = arm.transform.localScale.x;
+            arm.transform.localScale = new Vector3(1, 1, 1);
+
             handheldItem.transform.parent = arm;
             handheldItem.transform.localPosition = new Vector3(0, 0, 0);
             HandheldItemManager.Instance.Remove(handheldItem);
 
+            // Recover original direction
+            arm.transform.localScale = new Vector3(direction, 1, 1);
+
             if (prevItem != null) {
                 prevItem.transform.parent = null;
                 HandheldItemManager.Instance.Add(prevItem);
+
+                var prevScale = prevItem.transform.localScale;
+                prevScale.x = Mathf.Abs(prevScale.x);
+
+                prevItem.transform.localScale = prevScale;
             }
         }
     }
