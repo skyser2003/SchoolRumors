@@ -24,6 +24,7 @@ class Player : MonoBehaviour {
 
             handheldItem.transform.parent = arm;
             handheldItem.transform.localPosition = new Vector3(0, 0, 0);
+            handheldItem.transform.localEulerAngles = new Vector3(0, 0, 0);
             HandheldItemManager.Instance.Remove(handheldItem);
 
             // Recover original direction
@@ -37,6 +38,7 @@ class Player : MonoBehaviour {
                 prevScale.x = Mathf.Abs(prevScale.x);
 
                 prevItem.transform.localScale = prevScale;
+                prevItem.transform.localEulerAngles = new Vector3(0, 0, 0);
             }
         }
     }

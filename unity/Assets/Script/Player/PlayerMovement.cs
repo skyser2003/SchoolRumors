@@ -25,12 +25,14 @@ public class PlayerMovement : MonoBehaviour {
     MeshRenderer meshRenderer;
 
     public Transform rightHand;
+    private Vector3 rightHandOffset;
 
     private void Start()
     {
         ChangeFloor.lastTeleportPos = transform.position;
         control = GetComponent<CharacterController>();
         graphicsOffset = graphics.localPosition;
+        rightHandOffset = rightHand.localPosition;
         meshRenderer = GetComponentInChildren<MeshRenderer>();
     }
 
@@ -146,5 +148,8 @@ public class PlayerMovement : MonoBehaviour {
 
         graphics.localPosition = graphicsOffset + Vector3.up * walkCurveBounce.Evaluate(animV);
         graphics.eulerAngles = new Vector3(0.0f, 0.0f, walkCurveWave.Evaluate(animV) * 10.0f);
+
+        rightHand.localPosition = rightHandOffset + Vector3.up * walkCurveBounce.Evaluate(animV);
+        rightHand.eulerAngles = new Vector3(0.0f, 0.0f, walkCurveWave.Evaluate(animV) * 10.0f);
     }
 }
