@@ -36,7 +36,7 @@ class HandheldItemManager {
         var pos2D = new Vector2(pos.x, pos.z);
 
         foreach (var handheldItem in handheldItemList) {
-            var handheldItemPos2D = new Vector2(handheldItem.transform.position.x, handheldItem.transform.position.y);
+            var handheldItemPos2D = new Vector2(handheldItem.transform.position.x, handheldItem.transform.position.z);
 
             var distance = Vector2.Distance(pos2D, handheldItemPos2D);
             if (distance <= maxDistance && (closest == null || distance < closestDistance)) {

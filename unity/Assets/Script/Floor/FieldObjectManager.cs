@@ -31,7 +31,7 @@ class FieldObjectManager {
         var pos2D = new Vector2(pos.x, pos.z);
 
         foreach (var obj in objList) {
-            var objPos2D = new Vector2(obj.transform.position.x, obj.transform.position.y);
+            var objPos2D = new Vector2(obj.transform.position.x, obj.transform.position.z);
 
             var distance = Vector2.Distance(pos2D, objPos2D);
             if (distance <= maxDistance && (closest == null || distance < closestDistance)) {
