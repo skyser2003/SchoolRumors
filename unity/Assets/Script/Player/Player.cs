@@ -13,9 +13,17 @@ class Player : MonoBehaviour {
         }
         set
         {
+            var prevItem = handheldItem;
+
             handheldItem = value;
             var arm = transform.Find("Graphics/Quad");
             handheldItem.transform.parent = arm;
+            HandheldItemManager.Instance.Remove(handheldItem);
+
+            if (prevItem != null) {
+                prevItem.transform.parent = null;
+                HandheldItemManager.Instance.Add(prevItem);
+            }
         }
     }
 
