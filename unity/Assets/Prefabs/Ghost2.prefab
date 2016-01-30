@@ -365,8 +365,12 @@ MonoBehaviour:
   animChaseSpeed: 1.5
   audioFoot: {fileID: 0}
   footStepRate: 0.25
+  PatrolSeeDistance: 10
+  DetectedSeeDistance: 20
   patrolTexture: {fileID: 2800000, guid: bc4de52445fa2ed49b223a139adf0c9b, type: 3}
   chaseTexture: {fileID: 2800000, guid: 5f4a30a6001f546458bcb4fe90084e19, type: 3}
+  patrolAudio: {fileID: 8300000, guid: a6f3fc7766de25148a294778b13a8cc8, type: 3}
+  chaseAudio: {fileID: 8300000, guid: 4aca8be32a4ee38419f1496e11b8d841, type: 3}
 --- !u!195 &19579614
 NavMeshAgent:
   m_ObjectHideFlags: 1

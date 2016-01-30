@@ -13,12 +13,22 @@ public class PlayerUI : MonoBehaviour
 
     void Awake()
     {
-        health = healthSprites.Length -1;
+        Reset();
+    }
+
+    public void Reset()
+    {
+        health = healthSprites.Length - 1;
+
+        for (int i = 0; i < healthSprites.Length; ++i)
+        {
+            healthSprites[i].SetActive(true);
+        }
     }
 
     void OnLevelWasLoaded(int level)
     {
-        health = healthSprites.Length - 1;
+        Reset();
     }
 
     public void TakeDamage()
