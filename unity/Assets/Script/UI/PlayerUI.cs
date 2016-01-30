@@ -6,6 +6,7 @@ public class PlayerUI : MonoBehaviour
 {
     public GameObject[] healthSprites;
     int health;
+    public int MaxHealth { get { return healthSprites.Length; } }
 
     float damagedTimer;
     float damageRate = 2.0f;
@@ -40,6 +41,14 @@ public class PlayerUI : MonoBehaviour
             }
         }
     }
-	
 
+    public void Heal(int healAmount)
+    {
+        health += healAmount;
+        health = Mathf.Min(health, MaxHealth);
+
+        for (int i = 0; i < healthSprites.Length; ++i) {
+            healthSprites[i].SetActive(health >= i);
+        }
+    }
 }
