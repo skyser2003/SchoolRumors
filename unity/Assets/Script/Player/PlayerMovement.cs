@@ -4,6 +4,7 @@ using System.Collections;
 public class PlayerMovement : MonoBehaviour {
     private CharacterController control;
     private Vector3 direction = new Vector3();
+    public Vector3 Direction { get { return direction; } }
 
     public float Speed;
 

@@ -408,6 +408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d6a4c5f0f138db458d31de707cf6da4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SearchDelayTime: 1
 --- !u!143 &14343362
 CharacterController:
   m_ObjectHideFlags: 1
@@ -436,6 +437,10 @@ Prefab:
       propertyPath: rightHand
       value: 
       objectReference: {fileID: 417228}
+    - target: {fileID: 0}
+      propertyPath: SearchDelayTime
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 165176}
