@@ -248,7 +248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLockRequired: 1
-  keyItem: {fileID: 0}
+  keyItem: {fileID: 1508649755}
 --- !u!1 &351789993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1692,6 +1692,12 @@ RectTransform:
   m_PrefabParentObject: {fileID: 22431946, guid: baa6f48d4df60c84981b741a5118e5c0,
     type: 2}
   m_PrefabInternal: {fileID: 772229961}
+--- !u!114 &1508649755 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11467338, guid: cadf8b876608477458d15fa74253421d,
+    type: 2}
+  m_PrefabInternal: {fileID: 475902237}
+  m_Script: {fileID: 11500000, guid: 6b9154434425cfb4bac13d95d94d556b, type: 3}
 --- !u!1 &1513194201
 GameObject:
   m_ObjectHideFlags: 0
