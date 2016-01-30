@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 class FieldObject : MonoBehaviour {
-    public Item item;
+    public RitualItem item;
 
     private void Start()
     {

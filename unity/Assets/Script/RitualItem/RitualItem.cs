@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-class Item : MonoBehaviour {
+class RitualItem : MonoBehaviour {
     private void OnTriggerEnter(Collider collider)
     {
         var player = collider.gameObject.GetComponent<Player>();

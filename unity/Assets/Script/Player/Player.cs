@@ -1,16 +1,16 @@
 ﻿using UnityEngine;
 
 class Player : MonoBehaviour {
-    private Inventory inventory;
+    private RitualItemInventory inventory;
 
-    public Inventory Inventory { get { return inventory; } }
+    public RitualItemInventory Inventory { get { return inventory; } }
 
     private void Start()
     {
-        inventory = GetComponent<Inventory>();
+        inventory = GetComponent<RitualItemInventory>();
     }
 
-    public void AcquireItem(Item item)
+    public void AcquireItem(RitualItem item)
     {
         inventory.AddItem(item);
     }
