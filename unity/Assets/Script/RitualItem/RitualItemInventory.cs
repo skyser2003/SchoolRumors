@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-class Inventory : MonoBehaviour {
-    private List<Item> itemList = new List<Item>();
+class RitualItemInventory : MonoBehaviour {
+    private List<RitualItem> itemList = new List<RitualItem>();
 
     public int Count { get { return itemList.Count; } }
 
@@ -16,7 +16,7 @@ class Inventory : MonoBehaviour {
 
     }
 
-    public void AddItem(Item item)
+    public void AddItem(RitualItem item)
     {
         itemList.Add(item);
     }

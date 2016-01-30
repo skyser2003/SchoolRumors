@@ -258,7 +258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf2085bb01f9ee840bd78e2b661f6b31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 2120951097}
 --- !u!1 &210938553
 GameObject:
   m_ObjectHideFlags: 0
@@ -788,7 +788,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22431946, guid: baa6f48d4df60c84981b741a5118e5c0, type: 2}
       propertyPath: m_RootOrder
-      value: 19
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 22431946, guid: baa6f48d4df60c84981b741a5118e5c0, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -1574,3 +1574,9 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 16
+--- !u!114 &2120951097 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11408196, guid: e97ed44f5d5ff0446a5ae0ab13fc2602,
+    type: 2}
+  m_PrefabInternal: {fileID: 619199668}
+  m_Script: {fileID: 11500000, guid: 8488a7c3cdd430849a51c50fa859322e, type: 3}
