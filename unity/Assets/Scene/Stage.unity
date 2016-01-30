@@ -1247,6 +1247,10 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 170274, guid: baa6f48d4df60c84981b741a5118e5c0, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: baa6f48d4df60c84981b741a5118e5c0, type: 2}
   m_IsPrefabParent: 0
@@ -10713,6 +10717,10 @@ Transform:
   - {fileID: 410804260}
   m_Father: {fileID: 1782419016}
   m_RootOrder: 5
+--- !u!4 &1128545323 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 457106, guid: 3978ffd2fe298cf459a81e05f03cc5f0, type: 2}
+  m_PrefabInternal: {fileID: 838125168}
 --- !u!1 &1130834151
 GameObject:
   m_ObjectHideFlags: 0
@@ -17129,6 +17137,33 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9829b8986b94b084096f6c685b034ed6, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1813417606
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1813417607}
+  m_Layer: 0
+  m_Name: Door
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1813417607
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1813417606}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1128545323}
+  m_RootOrder: 4
 --- !u!1 &1818255152
 GameObject:
   m_ObjectHideFlags: 0
