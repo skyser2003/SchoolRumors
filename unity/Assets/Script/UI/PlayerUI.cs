@@ -46,10 +46,7 @@ public class PlayerUI : MonoBehaviour
             gaugeLeftTime -= dt;
 
             if(gaugeLeftTime <= 0) {
-                gaugeBack.gameObject.SetActive(false);
-                gaugeFront.gameObject.SetActive(false);
-                gaugeFillTime = -1;
-                gaugeLeftTime = -1;
+                CancelGauge();
             }
             else {
                 gaugeFront.fillAmount = (gaugeFillTime - gaugeLeftTime) / gaugeFillTime;
@@ -82,10 +79,7 @@ public class PlayerUI : MonoBehaviour
         gaugeBack = transform.FindChild("GaugeBack").GetComponent<Image>();
         gaugeFront = transform.FindChild("GaugeFront").GetComponent<Image>();
 
-        gaugeBack.gameObject.SetActive(false);
-        gaugeFront.gameObject.SetActive(false);
-        gaugeFillTime = -1;
-        gaugeLeftTime = -1;
+        CancelGauge();
     }
 
     void OnLevelWasLoaded(int level)
@@ -144,5 +138,14 @@ public class PlayerUI : MonoBehaviour
         gaugeFront.fillAmount = 0;
         gaugeBack.gameObject.SetActive(true);
         gaugeFront.gameObject.SetActive(true);
+    }
+
+    public void CancelGauge()
+    {
+        gaugeFillTime = -1;
+        gaugeLeftTime = -1;
+        gaugeFront.fillAmount = 0;
+        gaugeBack.gameObject.SetActive(false);
+        gaugeFront.gameObject.SetActive(false);
     }
 }

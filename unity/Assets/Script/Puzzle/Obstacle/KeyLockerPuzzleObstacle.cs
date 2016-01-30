@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 class KeyLockerPuzzleObstacle : PuzzleObstacle {
     private PlayerUI playerUI;
@@ -12,17 +13,22 @@ class KeyLockerPuzzleObstacle : PuzzleObstacle {
         playerUI = GameObject.FindWithTag("UI").GetComponent<PlayerUI>();
     }
 
-    public override void Action(Player player)
+    public override bool CheckIfActionIsPossible(Player player)
     {
         if (item == null) {
-            return;
+            return false;
         }
 
         if (player.HandheldItem == null || player.HandheldItem.GetType() != typeof(WrenchHandheldItem)) {
             playerUI.SetErrorMessage(ErrorText, 2);
-            return;
+            return false;
         }
 
+        return true;
+    }
+
+    public override void Action(Player player)
+    {
         item.GetPickedUp(player);
         item = null;
     }

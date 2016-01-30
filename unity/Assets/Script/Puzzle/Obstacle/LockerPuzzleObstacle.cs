@@ -12,17 +12,22 @@ class LockerPuzzleObstacle : PuzzleObstacle {
         playerUI = GameObject.FindWithTag("UI").GetComponent<PlayerUI>();
     }
 
-    public override void Action(Player player)
+    public override bool CheckIfActionIsPossible(Player player)
     {
         if (item == null) {
-            return;
+            return false;
         }
 
         if (player.HandheldItem == null || player.HandheldItem.GetType() != typeof(WrenchHandheldItem)) {
             playerUI.SetErrorMessage(ErrorText, 2);
-            return;
+            return false;
         }
 
+        return true;
+    }
+
+    public override void Action(Player player)
+    {
         player.AcquireItem(item);
         item = null;
     }
