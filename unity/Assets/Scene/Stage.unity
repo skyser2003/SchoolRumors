@@ -4266,7 +4266,7 @@ Prefab:
       objectReference: {fileID: 2087540281}
     - target: {fileID: 172878, guid: a64e27b4fa3f519469c89071ba0f16f1, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11472596, guid: a64e27b4fa3f519469c89071ba0f16f1, type: 2}
       propertyPath: PatrolSeeDistance
@@ -14460,7 +14460,7 @@ Transform:
   - {fileID: 418295866}
   - {fileID: 1936061519}
   m_Father: {fileID: 2019173154}
-  m_RootOrder: 6
+  m_RootOrder: 2
 --- !u!1 &1591934178
 GameObject:
   m_ObjectHideFlags: 0
@@ -17417,11 +17417,11 @@ Transform:
   m_Children:
   - {fileID: 911501277}
   - {fileID: 750655123}
+  - {fileID: 1579399739}
   - {fileID: 1439504869}
   - {fileID: 362507133}
   - {fileID: 1509013558}
   - {fileID: 1576312785}
-  - {fileID: 1579399739}
   - {fileID: 1155567310}
   - {fileID: 1502787210}
   - {fileID: 1894682087}
