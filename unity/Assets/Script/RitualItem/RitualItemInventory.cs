@@ -1,23 +1,22 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-class RitualItemInventory : MonoBehaviour {
+class RitualItemInventory : MonoBehaviour
+{
     private List<RitualItem> itemList = new List<RitualItem>();
 
     public int Count { get { return itemList.Count; } }
 
+    PlayerUI playerUI;
+
     private void Start()
     {
-
-    }
-
-    private void FixedUpdate()
-    {
-
+        playerUI = GameObject.FindWithTag("UI").GetComponent<PlayerUI>();
     }
 
     public void AddItem(RitualItem item)
     {
+        playerUI.SetRitualItem(item.id, true);
         itemList.Add(item);
     }
 }

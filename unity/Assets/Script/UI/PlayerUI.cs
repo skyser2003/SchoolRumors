@@ -15,6 +15,8 @@ public class PlayerUI : MonoBehaviour
     public Text errorMessage;
     private float fadeOutTime;
 
+    public GameObject[] ritualItemSprites;
+
     void Awake()
     {
         Reset();
@@ -87,5 +89,10 @@ public class PlayerUI : MonoBehaviour
     {
         errorMessage.text = text;
         this.fadeOutTime = fadeOutTime;
+    }
+
+    public void SetRitualItem(int id, bool hasItem)
+    {
+        ritualItemSprites[id].SetActive(hasItem);
     }
 }
