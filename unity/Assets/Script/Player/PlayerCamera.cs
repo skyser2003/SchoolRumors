@@ -44,20 +44,20 @@ class PlayerCamera : MonoBehaviour {
             (player.position.x - transform.position.x) * 3.0f,
             mainCamera.localEulerAngles.z);
 
-       //Vector3 newcampos = cameraArea.transform.position + DeltaPosToBound;
-       ////raycast
-       //float distance = Vector3.Distance(newcampos, mainCamera.position);
-       //Ray ray = new Ray(mainCamera.transform.position, newcampos);
-       //RaycastHit[] hits = Physics.RaycastAll(ray, distance);
-       //foreach (RaycastHit hit in hits)
-       //{
-       //    if (hit.collider.gameObject.isStatic)
-       //    {
-       //        newcampos = hit.point;
-       //        break;
-       //    }
-       //}
-       //mainCamera.transform.position = newcampos;
+        Vector3 newcampos = Vector3.Lerp(mainCamera.transform.position, cameraArea.transform.position + DeltaPosToBound, 0.5f);
+        //raycast
+        float distance = Vector3.Distance(cameraArea.transform.position, newcampos);
+        Ray ray = new Ray(cameraArea.transform.position, (newcampos - cameraArea.transform.position).normalized);
+        RaycastHit[] hits = Physics.RaycastAll(ray, distance);
+        foreach (RaycastHit hit in hits)
+        {
+            if (hit.collider.gameObject.isStatic)
+            {
+                newcampos = hit.point;
+                break;
+            }
+        }
+        mainCamera.transform.position = newcampos;
     }
 
 }
