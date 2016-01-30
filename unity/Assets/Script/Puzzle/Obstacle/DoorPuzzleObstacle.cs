@@ -14,7 +14,7 @@ class DoorPuzzleObstacle : PuzzleObstacle {
 
     public override void Action(Player player)
     {
-        if (isOpen == true || player.HandheldItem == keyItem) {
+        if (isOpen == true || player.HandheldItem != keyItem) {
             return;
         }
 
