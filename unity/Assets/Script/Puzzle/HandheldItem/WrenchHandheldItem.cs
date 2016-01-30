@@ -7,7 +7,7 @@ class WrenchHandheldItem : HandheldItem {
             return;
         }
 
-        if (obstacle.GetType() == typeof(DoorPuzzleObstacle)) {
+        if (obstacle.GetType() == typeof(LockerPuzzleObstacle)) {
             obstacle.Action(player);
         }
     }

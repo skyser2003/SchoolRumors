@@ -7,7 +7,7 @@ class KeyHandheldItem : HandheldItem {
             return;
         }
 
-        if (obstacle.GetType() == typeof(LockerPuzzleObstacle)) {
+        if (obstacle.GetType() == typeof(DoorPuzzleObstacle)) {
             obstacle.Action(player);
         }
     }
