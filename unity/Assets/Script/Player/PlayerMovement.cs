@@ -15,6 +15,10 @@ public class PlayerMovement : MonoBehaviour {
     bool isFacingRight;
     bool isCrouching;
 
+    public AudioSource audioFoot;
+    float footStepTimer;
+    float footStepRate = 0.25f;
+
     private void Start()
     {
         control = GetComponent<CharacterController>();
@@ -87,6 +91,19 @@ public class PlayerMovement : MonoBehaviour {
         if (animV > 1.0f)
         {
             animV = 0.0f;
+        }
+
+        if (speed > 0.0f)
+        {
+            footStepTimer += Time.deltaTime;
+
+            if (footStepTimer > footStepRate)
+            {
+                footStepRate = 0.25f * Random.Range(0.95f, 1.05f);
+                footStepTimer = 0.0f;
+                audioFoot.pitch = Random.Range(0.9f, 1.1f);
+                audioFoot.Play();
+            }
         }
 
         if (speed <= 0.0f)
