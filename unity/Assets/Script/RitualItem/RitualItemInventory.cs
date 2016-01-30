@@ -8,6 +8,7 @@ class RitualItemInventory : MonoBehaviour
     public int Count { get { return itemList.Count; } }
 
     PlayerUI playerUI;
+    public AudioSource audioGetItem;
 
     private void Start()
     {
@@ -16,6 +17,7 @@ class RitualItemInventory : MonoBehaviour
 
     public void AddItem(RitualItem item)
     {
+        audioGetItem.Play();
         playerUI.SetRitualItem(item.id, true);
         itemList.Add(item);
     }
