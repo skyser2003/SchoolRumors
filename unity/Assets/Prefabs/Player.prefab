@@ -147,6 +147,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &186280
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 416760}
+  - 119: {fileID: 11981164}
+  m_Layer: 0
+  m_Name: BlobShadowProjector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &403510
 Transform:
   m_ObjectHideFlags: 1
@@ -161,6 +177,7 @@ Transform:
   - {fileID: 459456}
   - {fileID: 417228}
   - {fileID: 457634}
+  - {fileID: 416760}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &404518
@@ -176,6 +193,18 @@ Transform:
   - {fileID: 498114}
   m_Father: {fileID: 403510}
   m_RootOrder: 0
+--- !u!4 &416760
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 186280}
+  m_LocalRotation: {x: 0.75157696, y: 0, z: 0, w: 0.6596455}
+  m_LocalPosition: {x: 0, y: 0.349, z: 0.105}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 403510}
+  m_RootOrder: 4
 --- !u!4 &416854
 Transform:
   m_ObjectHideFlags: 1
@@ -698,7 +727,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d6a4c5f0f138db458d31de707cf6da4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SearchDelayTime: 1
+--- !u!119 &11981164
+Projector:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 186280}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_NearClipPlane: 0.1
+  m_FarClipPlane: 3
+  m_FieldOfView: 30
+  m_AspectRatio: 1
+  m_Orthographic: 0
+  m_OrthographicSize: 2
+  m_Material: {fileID: 2100000, guid: e30ff3588e719f34bbf0c66f22d97487, type: 2}
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!143 &14343362
 CharacterController:
   m_ObjectHideFlags: 1
