@@ -829,7 +829,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 1c7e724e1a710cc478280b567013c6ff, type: 3}
-    m_FontSize: 12
+    m_FontSize: 10
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -840,11 +840,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'TOOLTIP1:
-
-    I am a mighty tooltip
-
-    fear me!'
+  m_Text: "The dead girl\u2019s Diary\nIt is written that she thinks her drawing was
+    stolen\r\n"
 --- !u!114 &11415854
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1051,7 +1048,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 1c7e724e1a710cc478280b567013c6ff, type: 3}
-    m_FontSize: 12
+    m_FontSize: 10
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -1062,11 +1059,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'TOOLTIP3:
+  m_Text: 'Certificate of award
 
-    I am a mighty tooltip
-
-    fear me!'
+    My certificate of award. It seems to be riped off from the class bulletin board'
 --- !u!114 &11445644
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1126,7 +1121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.6911765, g: 0.6911765, b: 0.6911765, a: 0.847}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1645,7 +1640,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 1c7e724e1a710cc478280b567013c6ff, type: 3}
-    m_FontSize: 12
+    m_FontSize: 10
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -1656,11 +1651,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'TOOLTIP2:
-
-    I am a mighty tooltip
-
-    fear me!'
+  m_Text: "The dead girl\u2019s Canvas\nIt is the drawing which she thinks to be stolen
+    \r\n"
 --- !u!114 &11496202
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1930,8 +1922,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.45004272, y: -0.10001373}
-  m_SizeDelta: {x: 145.7, y: 59.6}
+  m_AnchoredPosition: {x: 0.45004272, y: -1.1}
+  m_SizeDelta: {x: 145.7, y: 57.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &22416358
 RectTransform:
@@ -1981,8 +1973,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.45004272, y: -0.10001373}
-  m_SizeDelta: {x: 145.7, y: 59.6}
+  m_AnchoredPosition: {x: 0.45004272, y: -1.1}
+  m_SizeDelta: {x: 145.7, y: 57.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &22425930
 RectTransform:
@@ -2137,8 +2129,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.45004272, y: -0.10001373}
-  m_SizeDelta: {x: 145.7, y: 59.6}
+  m_AnchoredPosition: {x: 0.45004272, y: -1.1}
+  m_SizeDelta: {x: 145.7, y: 57.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &22458570
 RectTransform:
@@ -2312,7 +2304,7 @@ RectTransform:
   m_RootOrder: 13
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1014, y: 0.000015258789}
+  m_AnchoredPosition: {x: -3, y: 0.000015258789}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &22497186
