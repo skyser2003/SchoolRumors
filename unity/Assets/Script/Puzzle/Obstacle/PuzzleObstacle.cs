@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 abstract class PuzzleObstacle : MonoBehaviour {
-    private void Start()
+    protected virtual void Start()
     {
         PuzzleObstacleManager.Instance.Add(this);
     }
