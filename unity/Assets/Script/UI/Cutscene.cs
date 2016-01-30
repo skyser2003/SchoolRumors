@@ -21,6 +21,8 @@ public class Cutscene : MonoBehaviour
 
     AudioSource audioSource;
 
+    public static bool isLast = false;
+
     void Awake()
     {
         isInCutscene = false;
@@ -56,8 +58,16 @@ public class Cutscene : MonoBehaviour
 
                 if (currentSlide >= slides.Length)
                 {
-                    isInCutscene = false;
-                    cutsceneObjects.SetActive(false);
+                    if(isLast)
+                    {
+                        Application.Quit();
+                        Debug.Log("Quit game");
+                    }
+                    else
+                    {
+                        isInCutscene = false;
+                        cutsceneObjects.SetActive(false);
+                    }
                 }
                 else
                 {

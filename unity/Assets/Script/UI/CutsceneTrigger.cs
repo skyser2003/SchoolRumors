@@ -4,6 +4,7 @@ using System.Collections;
 public class CutsceneTrigger : MonoBehaviour
 {
     public Cutscene.CutsceneSlide[] cutsceneSlides;
+    public bool isLastCutscene;
 
 	void OnTriggerEnter (Collider col)
     {
@@ -11,6 +12,7 @@ public class CutsceneTrigger : MonoBehaviour
         {
             if (cutsceneSlides != null)
             {
+                Cutscene.isLast = isLastCutscene;
                 GameObject.FindWithTag("UI").GetComponent<Cutscene>().StartCutscene(cutsceneSlides);
                 gameObject.SetActive(false);
             }
