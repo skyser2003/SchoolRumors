@@ -31,7 +31,7 @@ class PuzzleObstacleManager {
         var pos2D = new Vector2(pos.x, pos.z);
 
         foreach (var obstacle in obstacleList) {
-            var obstaclePos2D = new Vector2(obstacle.transform.position.x, obstacle.transform.position.y);
+            var obstaclePos2D = new Vector2(obstacle.transform.position.x, obstacle.transform.position.z);
 
             var distance = Vector2.Distance(pos2D, obstaclePos2D);
             if (distance <= maxDistance && (closest == null || distance < closestDistance)) {
