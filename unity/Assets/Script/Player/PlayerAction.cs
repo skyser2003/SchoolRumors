@@ -46,6 +46,10 @@ class PlayerAction : MonoBehaviour {
 
             prevNearestObj = nearestObj;
         }
+        else if (nearestObj == null && prevNearestObj != null) {
+            prevNearestObj.GetComponentInChildren<Renderer>().material.shader = Shader.Find("Standard");
+            prevNearestObj = null;
+        }
 
         if (Input.GetKeyDown(KeyCode.Space)) {
             if (nearestObj != null) {
