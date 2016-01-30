@@ -281,7 +281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f8e1129af62f3746b57315719ab5132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DelayTime: 0
+  DelayTime: 2
   isLockRequired: 1
   keyItem: {fileID: 788804559}
   LockedTextShow: Door is locked
@@ -2510,7 +2510,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 0}
   HealAmount: 0
-  DelayTime: 0
+  DelayTime: 1
 --- !u!1 &241407834
 GameObject:
   m_ObjectHideFlags: 0
@@ -3975,7 +3975,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 0}
   HealAmount: 0
-  DelayTime: 0
+  DelayTime: 1
 --- !u!1 &395986269
 GameObject:
   m_ObjectHideFlags: 0
@@ -4696,6 +4696,7 @@ Transform:
   - {fileID: 1679949014}
   - {fileID: 1987267134}
   - {fileID: 845662464}
+  - {fileID: 853199485}
   m_Father: {fileID: 2019173154}
   m_RootOrder: 17
 --- !u!1 &460701474
@@ -5031,7 +5032,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 0}
   HealAmount: 0
-  DelayTime: 0
+  DelayTime: 1
 --- !u!1 &479051028
 GameObject:
   m_ObjectHideFlags: 0
@@ -5087,7 +5088,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 0}
   HealAmount: 0
-  DelayTime: 0
+  DelayTime: 1
 --- !u!1 &495663797
 GameObject:
   m_ObjectHideFlags: 0
@@ -6719,7 +6720,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f8e1129af62f3746b57315719ab5132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DelayTime: 0
+  DelayTime: 2
   isLockRequired: 1
   keyItem: {fileID: 2031341031}
   LockedTextShow: Door is locked
@@ -8736,6 +8737,64 @@ Transform:
   - {fileID: 413446057}
   m_Father: {fileID: 456583448}
   m_RootOrder: 4
+--- !u!1 &853199484
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 195450, guid: 5bff3b8a81769a84b96925c556b707fe, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 853199485}
+  - 114: {fileID: 853199487}
+  - 65: {fileID: 853199486}
+  m_Layer: 0
+  m_Name: Desk (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &853199485
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 423062, guid: 5bff3b8a81769a84b96925c556b707fe, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 853199484}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.02, y: 0.256, z: -3.94}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1119441370}
+  m_Father: {fileID: 456583448}
+  m_RootOrder: 5
+--- !u!65 &853199486
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6590482, guid: 5bff3b8a81769a84b96925c556b707fe,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 853199484}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.27, y: 0.5, z: 0.4859773}
+  m_Center: {x: 0.000000059604645, y: 0, z: 0.003449887}
+--- !u!114 &853199487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11435796, guid: 5bff3b8a81769a84b96925c556b707fe,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 853199484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06ff975886c77c54b881830bce3cf373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 624616769}
+  HealAmount: 0
+  DelayTime: 1
 --- !u!1 &856661657
 GameObject:
   m_ObjectHideFlags: 0
@@ -11455,7 +11514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f8e1129af62f3746b57315719ab5132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DelayTime: 0
+  DelayTime: 2
   isLockRequired: 1
   keyItem: {fileID: 2031341031}
   LockedTextShow: Door is locked
@@ -11687,6 +11746,70 @@ Transform:
   - {fileID: 905337902}
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!1 &1119441369
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 105476, guid: 5bff3b8a81769a84b96925c556b707fe, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1119441370}
+  - 33: {fileID: 1119441372}
+  - 23: {fileID: 1119441371}
+  m_Layer: 0
+  m_Name: Quad
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1119441370
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 422882, guid: 5bff3b8a81769a84b96925c556b707fe, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1119441369}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071067}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_Children: []
+  m_Father: {fileID: 853199485}
+  m_RootOrder: 0
+--- !u!23 &1119441371
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2324442, guid: 5bff3b8a81769a84b96925c556b707fe,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1119441369}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 5c788db1a7792134cb2f080b8eeea998, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &1119441372
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3343512, guid: 5bff3b8a81769a84b96925c556b707fe,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1119441369}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1122741599
 GameObject:
   m_ObjectHideFlags: 0
@@ -15084,7 +15207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f8e1129af62f3746b57315719ab5132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DelayTime: 0
+  DelayTime: 2
   isLockRequired: 1
   keyItem: {fileID: 788804559}
   LockedTextShow: Door is locked
@@ -15397,7 +15520,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 0}
   HealAmount: 0
-  DelayTime: 0
+  DelayTime: 1
 --- !u!1 &1458226148
 GameObject:
   m_ObjectHideFlags: 0
@@ -16742,7 +16865,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 0}
   HealAmount: 0
-  DelayTime: 0
+  DelayTime: 1
 --- !u!1 &1555476983
 GameObject:
   m_ObjectHideFlags: 0
@@ -16862,7 +16985,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 0}
   HealAmount: 0
-  DelayTime: 0
+  DelayTime: 1
 --- !u!1 &1562052801
 GameObject:
   m_ObjectHideFlags: 0
@@ -21149,7 +21272,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 0}
   HealAmount: 0
-  DelayTime: 0
+  DelayTime: 1
 --- !u!1001 &2013244027
 Prefab:
   m_ObjectHideFlags: 0
