@@ -3,6 +3,7 @@
 class DoorPuzzleObstacle : PuzzleObstacle {
     private bool isOpen;
 
+    public bool isLockRequired;
     public KeyHandheldItem keyItem;
 
     protected override void Start()
@@ -14,11 +15,18 @@ class DoorPuzzleObstacle : PuzzleObstacle {
 
     public override void Action(Player player)
     {
-        if (isOpen == true || player.HandheldItem != keyItem) {
+        if (isLockRequired == true && player.HandheldItem != keyItem) {
             return;
         }
 
-        isOpen = true;
-        transform.Rotate(0, 90, 0);
+        isLockRequired = false;
+        isOpen = !isOpen;
+
+        if (isOpen == true) {
+            transform.Rotate(0, 90, 0);
+        }
+        else {
+            transform.Rotate(0, -90, 0);
+        }
     }
 }
