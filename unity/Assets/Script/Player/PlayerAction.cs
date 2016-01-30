@@ -8,7 +8,6 @@ class PlayerAction : MonoBehaviour {
     private bool isSearching;
     private float curSearchTime;
     private FieldObject searchingObject;
-    public float SearchDelayTime;
 
     private MonoBehaviour prevNearestObj;
 
@@ -58,7 +57,7 @@ class PlayerAction : MonoBehaviour {
                     if (fieldObject.item != null) {
                         searchingObject = fieldObject;
                         isSearching = true;
-                        curSearchTime = SearchDelayTime;
+                        curSearchTime = fieldObject.DelayTime;
                     }
                 }
                 else if (handheldItem != null) {

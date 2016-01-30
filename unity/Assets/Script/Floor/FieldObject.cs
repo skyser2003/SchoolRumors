@@ -4,6 +4,7 @@ class FieldObject : MonoBehaviour {
     public RitualItem item;
 
     public int HealAmount;
+    public float DelayTime;
     
     private void Start()
     {
