@@ -19,6 +19,11 @@ public class Cutscene : MonoBehaviour
     public Image image;
     public Text dialog;
 
+    void Awake()
+    {
+        isInCutscene = false;
+    }
+
     public void StartCutscene(CutsceneSlide[] newSlides)
     {
         slides = newSlides;

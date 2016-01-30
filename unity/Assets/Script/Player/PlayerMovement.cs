@@ -27,6 +27,7 @@ public class PlayerMovement : MonoBehaviour {
 
     private void Start()
     {
+        ChangeFloor.lastTeleportPos = transform.position;
         control = GetComponent<CharacterController>();
         graphicsOffset = graphics.localPosition;
         meshRenderer = GetComponentInChildren<MeshRenderer>();

@@ -10,8 +10,13 @@ class PlayerCamera : MonoBehaviour {
 
     void Start()
     {
-        transform.position = player.position;
         playerScript = player.GetComponent<PlayerMovement>();
+        Reset();
+    }
+
+    public void Reset()
+    {
+        transform.position = player.position;
     }
 
     void FixedUpdate()

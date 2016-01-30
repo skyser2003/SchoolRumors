@@ -25,6 +25,8 @@ class GameProgressManager {
 
     public void RestartCurrentLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        GameObject.FindWithTag("Player").transform.position = ChangeFloor.lastTeleportPos;
+        GameObject.FindWithTag("CameraSystem").GetComponent<PlayerCamera>().Reset();
+        Enemy.ResetAll();
     }
 }

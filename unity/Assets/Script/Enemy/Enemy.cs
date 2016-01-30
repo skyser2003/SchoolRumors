@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 [RequireComponent(typeof(NavMeshAgent))]
 public class Enemy : MonoBehaviour
 {
+    public static List<Enemy> enemies = new List<Enemy>();
+
     public GameObject wayPoints;
     Vector3[] wayPointPositions;
     Vector3 chaseTarget;
@@ -18,6 +21,7 @@ public class Enemy : MonoBehaviour
 
     PatrolState currentState;
 
+    Vector3 startPos;
     public float walkSpeed = 2.0f;
     public float chaseSpeed = 3.0f;
 
@@ -43,8 +47,11 @@ public class Enemy : MonoBehaviour
         chase
     }
 
-	void Start ()
+	void Awake ()
     {
+        enemies.Add(this);
+        startPos = transform.position;
+
         agent = GetComponent<NavMeshAgent>();
         graphics = transform.FindChild("Graphics");
         currentState = PatrolState.patrol;
@@ -67,6 +74,41 @@ public class Enemy : MonoBehaviour
         }
 
         currentDestination = 0;
+    }
+
+    public void Reset()
+    {
+        transform.position = startPos;
+        currentState = PatrolState.patrol;
+        currentDestination = 0;
+        agent.SetDestination(wayPointPositions[currentDestination]);
+        isWaiting = false;
+        StartCoroutine("WaitAndEnable"); // Hax to fix a bug: agent and this script get disabled sometimes randomly and this re-enables them
+    }
+
+    public static void ResetAll()
+    {
+        for (int i = 0; i < Enemy.enemies.Count; ++i)
+        {
+            Enemy.enemies[i].GetComponent<NavMeshAgent>().enabled = true;
+            Enemy.enemies[i].enabled = true;
+            Enemy.enemies[i].Reset();
+        }
+    }
+
+    IEnumerator WaitAndEnable()
+    {
+        yield return new WaitForSeconds(1.0f);
+        Enemy.EnableAll();
+    }
+
+    public static void EnableAll()
+    {
+        for (int i = 0; i < Enemy.enemies.Count; ++i)
+        {
+            Enemy.enemies[i].GetComponent<NavMeshAgent>().enabled = true;
+            Enemy.enemies[i].enabled = true;
+        }
     }
 	
 	void Update ()
