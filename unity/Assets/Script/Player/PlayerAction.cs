@@ -13,6 +13,9 @@ class PlayerAction : MonoBehaviour {
 
     private MonoBehaviour prevNearestObj;
 
+    public AudioSource audioPickUp;
+    public AudioSource audioUse;
+
     private void Start()
     {
         player = GetComponent<Player>();
@@ -68,11 +71,13 @@ class PlayerAction : MonoBehaviour {
                     SetDelayedAction(() => fieldObject.Action(player), fieldObject.DelayTime);
                 }
                 else if (handheldItem != null) {
+                    audioPickUp.Play();
                     handheldItem.GetPickedUp(player);
                     handheldItem.GetComponentInChildren<Renderer>().material.shader = Shader.Find("Standard");
                 }
                 else if (puzzleObstacle != null) {
                     if (puzzleObstacle.CheckIfActionIsPossible(player) == true) {
+                        audioUse.Play();
                         SetDelayedAction(() => puzzleObstacle.Action(player), puzzleObstacle.DelayTime);
                     }
                 }
