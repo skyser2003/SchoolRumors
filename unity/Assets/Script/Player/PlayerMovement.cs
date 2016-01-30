@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour {
     public AudioSource audioFoot;
     float footStepTimer;
     float footStepRate = 0.25f;
+    public AudioSource audioCrouch;
 
     public Texture standTexture;
     public Texture crouchTexture;
@@ -88,6 +89,8 @@ public class PlayerMovement : MonoBehaviour {
 
             control.height = isCrouching ? 0.5f : 1.01f;
             meshRenderer.material.mainTexture = isCrouching ? crouchTexture : standTexture;
+
+            audioCrouch.Play();
         }
         
 
