@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
 
 class KeyHandheldItem : HandheldItem {
-    public override void Action()
+    public override void Action(PuzzleObstacle obstacle)
     {
-        var obstacle = PuzzleObstacleManager.Instance.FindClosest(transform.position, 1);
-        if (obstacle != null) {
+        if (obstacle == null) {
+            return;
+        }
+
+        if (obstacle.GetType() == typeof(LockerPuzzleObstacle)) {
             obstacle.Action(player);
         }
     }

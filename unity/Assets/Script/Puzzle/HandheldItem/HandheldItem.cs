@@ -7,9 +7,10 @@ abstract class HandheldItem : MonoBehaviour {
     private void Start()
     {
         IsHeldByPlayer = false;
+        HandheldItemManager.Instance.Add(this);
     }
 
-    public abstract void Action();
+    public abstract void Action(PuzzleObstacle obstacle);
 
     public void GetPickedUp(Player player)
     {

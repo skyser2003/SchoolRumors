@@ -11,9 +11,9 @@ class PlayerAction : MonoBehaviour {
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space)) {
-            var fieldObject = FieldObjectManager.Instance.FindClosest(transform.position, 1);
-            var handheldItem = HandheldItemManager.Instance.FindClosest(transform.position, 1);
-            var puzzleObstacle = PuzzleObstacleManager.Instance.FindClosest(transform.position, 1);
+            var fieldObject = FieldObjectManager.Instance.FindClosest(transform.position, 3);
+            var handheldItem = HandheldItemManager.Instance.FindClosest(transform.position, 3);
+            var puzzleObstacle = PuzzleObstacleManager.Instance.FindClosest(transform.position, 3);
 
             if (fieldObject != null && fieldObject.item != null) {
                 fieldObject.GiveItem(player);
@@ -23,7 +23,7 @@ class PlayerAction : MonoBehaviour {
                 HandheldItemManager.Instance.Remove(handheldItem);
             }
             else if (puzzleObstacle != null && player.HandheldItem != null) {
-                player.HandheldItem.Action();
+                player.HandheldItem.Action(puzzleObstacle);
             }
         }
     }

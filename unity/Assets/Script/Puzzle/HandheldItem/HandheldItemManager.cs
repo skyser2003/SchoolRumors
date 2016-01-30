@@ -16,21 +16,21 @@ class HandheldItemManager {
         }
     }
 
-    private List<KeyHandheldItem> handheldItemList = new List<KeyHandheldItem>();
+    private List<HandheldItem> handheldItemList = new List<HandheldItem>();
 
-    public void Add(KeyHandheldItem handheldItem)
+    public void Add(HandheldItem handheldItem)
     {
         handheldItemList.Add(handheldItem);
     }
 
-    public void Remove(KeyHandheldItem handheldItem)
+    public void Remove(HandheldItem handheldItem)
     {
         handheldItemList.Remove(handheldItem);
     }
 
-    public KeyHandheldItem FindClosest(Vector3 pos, float maxDistance)
+    public HandheldItem FindClosest(Vector3 pos, float maxDistance)
     {
-        KeyHandheldItem closest = null;
+        HandheldItem closest = null;
         float closestDistance = 0;
 
         var pos2D = new Vector2(pos.x, pos.z);
