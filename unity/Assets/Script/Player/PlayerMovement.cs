@@ -54,7 +54,6 @@ public class PlayerMovement : MonoBehaviour {
             return;
         }
             
-
         if (Input.GetKeyDown(KeyCode.LeftArrow)) {
             direction.x = -1;
             isFacingRight = false;
@@ -63,7 +62,8 @@ public class PlayerMovement : MonoBehaviour {
             direction.x = 1;
             isFacingRight = true;
         }
-        else if (Input.GetKeyDown(KeyCode.DownArrow)) {
+
+        if (Input.GetKeyDown(KeyCode.DownArrow)) {
             direction.z = -1;
         }
         else if (Input.GetKeyDown(KeyCode.UpArrow)) {
@@ -73,13 +73,13 @@ public class PlayerMovement : MonoBehaviour {
         if (Input.GetKeyUp(KeyCode.LeftArrow)) {
             direction.x = 0;
         }
-        else if (Input.GetKeyUp(KeyCode.RightArrow)) {
+        if (Input.GetKeyUp(KeyCode.RightArrow)) {
             direction.x = 0;
         }
-        else if (Input.GetKeyUp(KeyCode.DownArrow)) {
+        if (Input.GetKeyUp(KeyCode.DownArrow)) {
             direction.z = 0;
         }
-        else if (Input.GetKeyUp(KeyCode.UpArrow)) {
+        if (Input.GetKeyUp(KeyCode.UpArrow)) {
             direction.z = 0;
         }
 
