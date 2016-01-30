@@ -44,6 +44,7 @@ public class Cutscene : MonoBehaviour
         image.sprite = slides[slideNum].image;
         image.gameObject.SetActive(image.sprite != null);
         dialog.text = slides[slideNum].dialog;
+        dialog.transform.parent.gameObject.SetActive(dialog.text != "");
     }
 
 	void Update ()

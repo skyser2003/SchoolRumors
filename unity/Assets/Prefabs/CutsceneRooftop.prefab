@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &168352
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 453110}
+  - 65: {fileID: 6538072}
+  - 114: {fileID: 11493686}
+  m_Layer: 0
+  m_Name: CutsceneRooftop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &453110
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 168352}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.03, y: 0, z: -9.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!65 &6538072
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 168352}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &11493686
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 168352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037fe76721687984fbe8d053cc161f4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cutsceneSlides:
+  - image: {fileID: 21300000, guid: 7bafda824e1c5c543bd9ada5e6868f69, type: 3}
+    dialog: "Eventually, you knew that I copied your drawing.\r But I was too afraid
+      to lose the first favor I earned so,\r\n"
+  - image: {fileID: 21300000, guid: 16401dc75a00fd146a3ddef9a8c00217, type: 3}
+    dialog: 'It is non sence, isn''t it? You? granting my wishes? '
+  - image: {fileID: 21300000, guid: 0238219ed5b5f9141b43c2b61896e904, type: 3}
+    dialog: 'You were always nothing but an obstacle to my hope. '
+  - image: {fileID: 0}
+    dialog: like that you became a ghost story
+  isLastCutscene: 0
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 168352}
+  m_IsPrefabParent: 1

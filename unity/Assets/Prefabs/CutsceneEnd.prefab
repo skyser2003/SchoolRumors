@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &120902
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 445620}
+  - 65: {fileID: 6537172}
+  - 114: {fileID: 11463390}
+  m_Layer: 0
+  m_Name: CutsceneEnd
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &445620
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 120902}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.1, y: 0, z: -9.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!65 &6537172
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 120902}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &11463390
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 120902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037fe76721687984fbe8d053cc161f4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cutsceneSlides:
+  - image: {fileID: 21300000, guid: 3bc15f72d8d0f5645a0d2f1e5b19fb4b, type: 3}
+    dialog: 'Children amused by the name of the dead '
+  - image: {fileID: 21300000, guid: 97f43a607296b6a44ac89ad17313e141, type: 3}
+    dialog: "and the ghost that makes your wish come true when given a legacy. \r\n"
+  - image: {fileID: 21300000, guid: 266fc6623807f5f4197907a53294e785, type: 3}
+    dialog: 'Answer me before the canvas is all burnt. '
+  - image: {fileID: 21300000, guid: bea58735628a6e6419bdf93163f1595d, type: 3}
+    dialog: What seems more likely to be a ghost story to you?
+  isLastCutscene: 1
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 120902}
+  m_IsPrefabParent: 1
