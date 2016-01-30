@@ -53,7 +53,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cutsceneSlides:
-  - image: {fileID: 21300000, guid: 3bc15f72d8d0f5645a0d2f1e5b19fb4b, type: 3}
+  - image: {fileID: 21300000, guid: 4f6d82c727611e940a8a653478c284a3, type: 3}
     dialog: 'Children amused by the name of the dead '
   - image: {fileID: 21300000, guid: 97f43a607296b6a44ac89ad17313e141, type: 3}
     dialog: "and the ghost that makes your wish come true when given a legacy. \r\n"
