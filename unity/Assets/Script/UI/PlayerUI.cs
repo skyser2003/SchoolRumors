@@ -43,6 +43,7 @@ public class PlayerUI : MonoBehaviour
             healthSprites[i].SetActive(true);
         }
 
+        errorMessage.text = "";
         fadeOutTime = 0;
     }
 
