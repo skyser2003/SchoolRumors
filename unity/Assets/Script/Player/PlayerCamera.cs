@@ -6,6 +6,7 @@ class PlayerCamera : MonoBehaviour {
     public BoxCollider cameraArea;
     public Transform player;
     PlayerMovement playerScript;
+    public Vector3 DeltaPosToBound;
 
     void Start()
     {
@@ -42,6 +43,21 @@ class PlayerCamera : MonoBehaviour {
             mainCamera.localEulerAngles.x,
             (player.position.x - transform.position.x) * 3.0f,
             mainCamera.localEulerAngles.z);
+
+       //Vector3 newcampos = cameraArea.transform.position + DeltaPosToBound;
+       ////raycast
+       //float distance = Vector3.Distance(newcampos, mainCamera.position);
+       //Ray ray = new Ray(mainCamera.transform.position, newcampos);
+       //RaycastHit[] hits = Physics.RaycastAll(ray, distance);
+       //foreach (RaycastHit hit in hits)
+       //{
+       //    if (hit.collider.gameObject.isStatic)
+       //    {
+       //        newcampos = hit.point;
+       //        break;
+       //    }
+       //}
+       //mainCamera.transform.position = newcampos;
     }
 
 }

@@ -57,8 +57,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 103906}
-  m_LocalRotation: {x: 0.21643963, y: 0, z: 0, w: 0.976296}
-  m_LocalPosition: {x: 0, y: 1.2, z: -2.4}
+  m_LocalRotation: {x: 0.13166273, y: -0, z: -0, w: 0.9912946}
+  m_LocalPosition: {x: 0, y: 0.75, z: -1.96}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 494628}
@@ -82,7 +82,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 183024}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.63, y: 0.5, z: -9.19}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 453668}
@@ -97,8 +97,8 @@ Camera:
   m_GameObject: {fileID: 103906}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0.019607844}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0.019607844}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -133,8 +133,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.5, y: 1, z: 1.0455954}
-  m_Center: {x: 0, y: 0, z: -0.3272009}
+  m_Size: {x: 1.1404322, y: 1, z: 0.59687996}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!81 &8193392
 AudioListener:
   m_ObjectHideFlags: 1
@@ -163,6 +163,7 @@ MonoBehaviour:
   mainCamera: {fileID: 453668}
   cameraArea: {fileID: 6507184}
   player: {fileID: 0}
+  DeltaPosToBound: {x: 0, y: 0.75, z: -1.96}
 --- !u!124 &12478528
 Behaviour:
   m_ObjectHideFlags: 1
