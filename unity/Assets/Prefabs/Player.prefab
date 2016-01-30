@@ -149,7 +149,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &186280
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
@@ -177,7 +177,6 @@ Transform:
   - {fileID: 459456}
   - {fileID: 417228}
   - {fileID: 457634}
-  - {fileID: 416760}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &404518
@@ -200,11 +199,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 186280}
   m_LocalRotation: {x: 0.75157696, y: 0, z: 0, w: 0.6596455}
-  m_LocalPosition: {x: 0, y: 0.349, z: 0.105}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0.42399997, z: 0.20999908}
+  m_LocalScale: {x: 2, y: 1.9831686, z: 1.0168314}
   m_Children: []
-  m_Father: {fileID: 403510}
-  m_RootOrder: 4
+  m_Father: {fileID: 498114}
+  m_RootOrder: 0
 --- !u!4 &416854
 Transform:
   m_ObjectHideFlags: 1
@@ -289,7 +288,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.425, z: 0}
   m_LocalScale: {x: 0.5, y: 1, z: 0.5}
-  m_Children: []
+  m_Children:
+  - {fileID: 416760}
   m_Father: {fileID: 404518}
   m_RootOrder: 0
 --- !u!23 &2317120
@@ -737,7 +737,7 @@ Projector:
   serializedVersion: 2
   m_NearClipPlane: 0.1
   m_FarClipPlane: 3
-  m_FieldOfView: 30
+  m_FieldOfView: 26
   m_AspectRatio: 1
   m_Orthographic: 0
   m_OrthographicSize: 2

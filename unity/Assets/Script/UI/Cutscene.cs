@@ -41,10 +41,17 @@ public class Cutscene : MonoBehaviour
 
     void ShowSlide(int slideNum)
     {
-        image.sprite = slides[slideNum].image;
-        image.gameObject.SetActive(image.sprite != null);
-        dialog.text = slides[slideNum].dialog;
-        dialog.transform.parent.gameObject.SetActive(dialog.text != "");
+        if (slideNum >= slides.Length)
+        {
+            Debug.LogWarning("Can't slow slide number " + slideNum);
+        }
+        else
+        {
+            image.sprite = slides[slideNum].image;
+            image.gameObject.SetActive(image.sprite != null);
+            dialog.text = slides[slideNum].dialog;
+            dialog.transform.parent.gameObject.SetActive(dialog.text != "");
+        }
     }
 
 	void Update ()
