@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour {
     public float animSpeed = 1.0f;
     public Transform graphics;
     Vector3 graphicsOffset;
+    bool isFacingRight;
 
     private void Start()
     {
@@ -29,9 +30,11 @@ public class PlayerMovement : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.LeftArrow)) {
             direction.x = -1;
+            isFacingRight = false;
         }
         else if (Input.GetKeyDown(KeyCode.RightArrow)) {
             direction.x = 1;
+            isFacingRight = true;
         }
         else if (Input.GetKeyDown(KeyCode.DownArrow)) {
             direction.z = -1;
@@ -63,6 +66,11 @@ public class PlayerMovement : MonoBehaviour {
         }
     }
 
+    void LateUpdate()
+    {
+        graphics.localScale = new Vector3(isFacingRight ? -1.0f : 1.0f, 1.0f, 1.0f);
+    }
+
     float animV;
     void UpdateWalkAnim(float speed)
     {
@@ -82,7 +90,6 @@ public class PlayerMovement : MonoBehaviour {
             {
                 animV = Mathf.Lerp(animV, 0.25f, Time.deltaTime * 10.0f);
             }
-            //animV = Mathf.Clamp01(animV);
         }
 
         graphics.localPosition = graphicsOffset + Vector3.up * walkCurveBounce.Evaluate(animV);
