@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 
 class PlayerCamera : MonoBehaviour {
 
@@ -8,6 +9,7 @@ class PlayerCamera : MonoBehaviour {
     PlayerMovement playerScript;
     public Vector3 DeltaPosToBound;
 
+    protected List<Renderer> WallTransparentList = new List<Renderer>();
     void Start()
     {
         playerScript = player.GetComponent<PlayerMovement>();
@@ -21,6 +23,14 @@ class PlayerCamera : MonoBehaviour {
 
     void FixedUpdate()
     {
+        foreach(Renderer render in WallTransparentList)
+        {
+            Color wallcolor = render.material.color;
+            wallcolor.a = 1f;
+            render.material.color = wallcolor;
+        }
+        WallTransparentList.Clear();
+
         Bounds bounds = cameraArea.bounds;
         Vector3 target = transform.position;
 
@@ -58,8 +68,19 @@ class PlayerCamera : MonoBehaviour {
         {
             if (hit.collider.gameObject.isStatic)
             {
-                newcampos = hit.point;
-                break;
+                Renderer currender = hit.collider.gameObject.GetComponent<Renderer>();
+                if(currender != null)
+                {
+                    if(!WallTransparentList.Contains(currender))
+                    {
+                        Color wallcolor = currender.material.color;
+                        wallcolor.a = 0.5f;
+                        currender.material.color = wallcolor;
+                        WallTransparentList.Add(currender);
+                    }
+                }
+                //newcampos = hit.point;
+                //break;
             }
         }
         mainCamera.transform.position = newcampos;
