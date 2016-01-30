@@ -6,6 +6,27 @@ class RitualItem : MonoBehaviour
     public static List<RitualItem> allItems = new List<RitualItem>();
     Vector3 startPos;
 
+    static public bool HaveAllRitualItems(RitualItemInventory inventory, int floorLevel)
+    {
+        int floorCount = Count(floorLevel);
+        int playerCount = inventory.Count(floorLevel);
+
+        return floorCount == playerCount;
+    }
+
+    static public int Count(int floorLevel)
+    {
+        int count = 0;
+
+        foreach (var item in allItems) {
+            if (item.FloorLevel == floorLevel) {
+                ++count;
+            }
+        }
+
+        return count;
+    }
+
     void Awake()
     {
         allItems.Add(this);
@@ -24,5 +45,6 @@ class RitualItem : MonoBehaviour
         transform.position = startPos;
     }
 
+    public int FloorLevel;
     public int id;
 }
