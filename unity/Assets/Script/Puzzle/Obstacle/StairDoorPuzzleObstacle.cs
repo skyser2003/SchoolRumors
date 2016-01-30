@@ -15,15 +15,23 @@ class StairDoorPuzzleObstacle : PuzzleObstacle {
         isOpen = false;
     }
 
-    public override void Action(Player player)
+    public override bool CheckIfActionIsPossible(Player player)
     {
         if (RitualItem.HaveAllRitualItems(player.Inventory, FloorLevel) == false) {
             playerUI.SetErrorMessage(ConditionTextShow, 2);
-            return;
+            return false;
         }
-        else if (isOpen == false) {
-            isOpen = true;
-            transform.Rotate(0, 90, 0);
+        else if (isOpen == true) {
+            return false;
         }
+        else {
+            return true;
+        }
+    }
+
+    public override void Action(Player player)
+    {
+        isOpen = true;
+        transform.Rotate(0, 90, 0);
     }
 }

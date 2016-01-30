@@ -8,7 +8,6 @@ class DoorPuzzleObstacle : PuzzleObstacle {
 
     private PlayerUI playerUI;
 
-
     public string LockedTextShow = "Door is locked";
 
     protected override void Start()
@@ -19,15 +18,22 @@ class DoorPuzzleObstacle : PuzzleObstacle {
         playerUI = GameObject.FindWithTag("UI").GetComponent<PlayerUI>();
     }
 
-    public override void Action(Player player)
+    public override bool CheckIfActionIsPossible(Player player)
     {
         if (isLockRequired == true && player.HandheldItem != keyItem) {
             playerUI.SetErrorMessage(LockedTextShow, 2);
-            return;
+            return false;
         }
+        else {
+            return true;
+        }
+    }
 
+    public override void Action(Player player)
+    {
         isLockRequired = false;
         isOpen = !isOpen;
+        DelayTime = 0;
 
         if (isOpen == true) {
             transform.Rotate(0, 90, 0);

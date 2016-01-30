@@ -32,5 +32,6 @@ class GameProgressManager {
         UIObject.GetComponent<Cutscene>().StartCutscene(UIObject.GetComponent<CutsceneContainer>().cutsceneSlides);
         UIObject.GetComponent<AudioSource>().Play();
         Enemy.ResetAll();
+        RitualItem.ResetAll();
     }
 }

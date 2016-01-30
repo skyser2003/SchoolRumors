@@ -1,13 +1,15 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 class PlayerAction : MonoBehaviour {
     private Player player;
     private PlayerMovement playerMove;
+    private PlayerUI playerUI;
 
-    private bool isSearching;
-    private float curSearchTime;
-    private FieldObject searchingObject;
+    private bool isDelayed;
+    private float curDelayTime;
+    private Action delayedAction;
 
     private MonoBehaviour prevNearestObj;
 
@@ -15,24 +17,29 @@ class PlayerAction : MonoBehaviour {
     {
         player = GetComponent<Player>();
         playerMove = GetComponent<PlayerMovement>();
+        playerUI = GameObject.FindWithTag("UI").GetComponent<PlayerUI>();
     }
 
     private void Update()
     {
         var dt = Time.deltaTime;
 
-        if (isSearching == true) {
+        if (isDelayed == true) {
             // Keep searching
             if (playerMove.Direction.magnitude == 0) {
-                curSearchTime -= dt;
-                if (curSearchTime <= 0) {
-                    searchingObject.Action(player);
+                curDelayTime -= dt;
+                if (curDelayTime <= 0) {
+                    delayedAction();
+
+                    isDelayed = false;
+                    delayedAction = null;
                 }
             }
             // Cancel
             else {
-                isSearching = false;
-                searchingObject = null;
+                isDelayed = false;
+                delayedAction = null;
+                playerUI.CancelGauge();
             }
         }
 
@@ -58,20 +65,29 @@ class PlayerAction : MonoBehaviour {
                 var puzzleObstacle = nearestObj as PuzzleObstacle;
 
                 if (fieldObject != null) {
-                    if (fieldObject.item != null) {
-                        searchingObject = fieldObject;
-                        isSearching = true;
-                        curSearchTime = fieldObject.DelayTime;
-                    }
+                    SetDelayedAction(() => fieldObject.Action(player), fieldObject.DelayTime);
                 }
                 else if (handheldItem != null) {
                     handheldItem.GetPickedUp(player);
                     handheldItem.GetComponentInChildren<Renderer>().material.shader = Shader.Find("Standard");
                 }
                 else if (puzzleObstacle != null) {
-                    puzzleObstacle.Action(player);
+                    if (puzzleObstacle.CheckIfActionIsPossible(player) == true) {
+                        SetDelayedAction(() => puzzleObstacle.Action(player), puzzleObstacle.DelayTime);
+                    }
                 }
             }
+        }
+    }
+
+    private void SetDelayedAction(Action action, float delayTime)
+    {
+        delayedAction = action;
+        isDelayed = true;
+        curDelayTime = delayTime;
+
+        if (delayTime != 0) {
+            playerUI.SetGaugeFillTime(delayTime);
         }
     }
 
