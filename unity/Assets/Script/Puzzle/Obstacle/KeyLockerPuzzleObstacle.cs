@@ -8,6 +8,7 @@ class KeyLockerPuzzleObstacle : PuzzleObstacle {
 
     protected override void Start()
     {
+        base.Start();
         playerUI = GameObject.FindWithTag("UI").GetComponent<PlayerUI>();
     }
 
