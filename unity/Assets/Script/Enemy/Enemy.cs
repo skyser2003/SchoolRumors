@@ -15,11 +15,11 @@ public class Enemy : MonoBehaviour
 
     const float requiredDistance = 0.1f;
 
-    bool isFacingRight;
+    protected bool isFacingRight;
     bool isTouching;
     Transform graphics;
 
-    PatrolState currentState;
+    protected PatrolState currentState;
 
     Vector3 startPos;
     public float walkSpeed = 2.0f;
@@ -41,7 +41,7 @@ public class Enemy : MonoBehaviour
     float footStepTimer;
     public float footStepRate = 0.25f;
 
-    enum PatrolState
+    public enum PatrolState
     {
         patrol,
         chase
@@ -294,7 +294,7 @@ public class Enemy : MonoBehaviour
         chaseTarget = player.position;
     }
 
-    void LateUpdate()
+    public virtual void LateUpdate()
     {
         graphics.localScale = new Vector3(isFacingRight ? 1.0f : -1.0f, 1.0f, 1.0f);
     }
