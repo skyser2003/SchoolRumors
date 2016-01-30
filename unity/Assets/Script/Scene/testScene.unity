@@ -247,6 +247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f8e1129af62f3746b57315719ab5132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DelayTime: 3
   isLockRequired: 1
   keyItem: {fileID: 1508649755}
   LockedTextShow: Door is locked
@@ -434,6 +435,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2daa103bd1b43254bac49bf11b00b428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DelayTime: 0.5
   ConditionTextShow: You need all ritual items to go to the next floor
   FloorLevel: 1
 --- !u!23 &367589806
@@ -2051,6 +2053,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd3ba354a257b5b498f176a6d4f21404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DelayTime: 0
   item: {fileID: 2052498141}
   ErrorText: 
 --- !u!1 &1539010092
