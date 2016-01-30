@@ -146,7 +146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wayPoints: {fileID: 0}
   walkSpeed: 1
-  chaseSpeed: 3
+  chaseSpeed: 3.3
   walkCurveBounce:
     serializedVersion: 2
     m_Curve:

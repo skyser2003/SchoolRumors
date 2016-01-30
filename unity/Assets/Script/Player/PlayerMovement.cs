@@ -7,9 +7,16 @@ public class PlayerMovement : MonoBehaviour {
 
     public float Speed;
 
+    public AnimationCurve walkCurveBounce;
+    public AnimationCurve walkCurveWave;
+    public float animSpeed = 1.0f;
+    public Transform graphics;
+    Vector3 graphicsOffset;
+
     private void Start()
     {
         control = GetComponent<CharacterController>();
+        graphicsOffset = graphics.localPosition;
     }
 
     private void FixedUpdate()
@@ -45,5 +52,40 @@ public class PlayerMovement : MonoBehaviour {
         else if (Input.GetKeyUp(KeyCode.UpArrow)) {
             direction.z = 0;
         }
+
+        if(direction.magnitude > 0.0f)
+        {
+            UpdateWalkAnim(animSpeed);
+        }
+        else
+        {
+            UpdateWalkAnim(0.0f);
+        }
+    }
+
+    float animV;
+    void UpdateWalkAnim(float speed)
+    {
+        animV += speed * Time.deltaTime;
+        if (animV > 1.0f)
+        {
+            animV = 0.0f;
+        }
+
+        if (speed <= 0.0f)
+        {
+            if (animV > 0.25f)
+            {
+                animV = Mathf.Lerp(animV, 0.75f, Time.deltaTime * 10.0f);
+            }
+            else
+            {
+                animV = Mathf.Lerp(animV, 0.25f, Time.deltaTime * 10.0f);
+            }
+            //animV = Mathf.Clamp01(animV);
+        }
+
+        graphics.localPosition = graphicsOffset + Vector3.up * walkCurveBounce.Evaluate(animV);
+        graphics.eulerAngles = new Vector3(0.0f, 0.0f, walkCurveWave.Evaluate(animV) * 10.0f);
     }
 }
