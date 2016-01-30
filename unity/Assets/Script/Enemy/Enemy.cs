@@ -18,8 +18,8 @@ public class Enemy : MonoBehaviour
 
     PatrolState currentState;
 
-    float walkSpeed = 2.0f;
-    float chaseSpeed = 3.0f;
+    public float walkSpeed = 2.0f;
+    public float chaseSpeed = 3.0f;
 
     bool isWaiting;
     float waitTimer;
@@ -27,6 +27,11 @@ public class Enemy : MonoBehaviour
     PlayerUI playerUI;
 
     float raycastHeight = 0.5f;
+
+    public AnimationCurve walkCurveBounce;
+    public AnimationCurve walkCurveWave;
+    public float animWalkSpeed = 1.0f;
+    public float animChaseSpeed = 2.0f;
 
     enum PatrolState
     {
@@ -79,6 +84,7 @@ public class Enemy : MonoBehaviour
 
     void Patrol()
     {
+        UpdateWalkAnim(animWalkSpeed);
         agent.speed = walkSpeed;
         agent.SetDestination(wayPointPositions[currentDestination]);
 
@@ -187,6 +193,27 @@ public class Enemy : MonoBehaviour
             }
             
         }
+
+        UpdateWalkAnim(isWaiting ? 0.0f : animWalkSpeed);
+    }
+
+    float animV;
+    void UpdateWalkAnim(float speed)
+    {
+        animV += speed * Time.deltaTime;
+        if(animV > 1.0f)
+        {
+            animV = 0.0f;
+        }
+
+        if(speed <= 0.0f)
+        {
+            animV -= Time.deltaTime;
+            animV = Mathf.Clamp01(animV);
+        }
+         
+        graphics.localPosition = Vector3.up * walkCurveBounce.Evaluate(animV);
+        graphics.eulerAngles = new Vector3(0.0f, 0.0f, walkCurveWave.Evaluate(animV) * 10.0f);
     }
 
     void OnPlayerCollision()
@@ -202,7 +229,6 @@ public class Enemy : MonoBehaviour
 
     void LateUpdate()
     {
-        graphics.rotation = Quaternion.identity;
         graphics.localScale = new Vector3(isFacingRight ? 1.0f : -1.0f, 1.0f, 1.0f);
     }
 }

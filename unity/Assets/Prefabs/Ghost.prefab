@@ -82,7 +82,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 173700}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.13, y: 0, z: 1.22}
+  m_LocalPosition: {x: -1.42, y: 0, z: 7.44}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 461260}
@@ -145,6 +145,62 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wayPoints: {fileID: 0}
+  walkSpeed: 1
+  chaseSpeed: 3
+  walkCurveBounce:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0.041584156
+      outSlope: 0.041584156
+      tangentMode: 0
+    - time: 0.25
+      value: 0.29999998
+      inSlope: -0.010635704
+      outSlope: -0.010635704
+      tangentMode: 0
+    - time: 0.5
+      value: 0
+      inSlope: 0.004693866
+      outSlope: 0.004693866
+      tangentMode: 0
+    - time: 0.75
+      value: 0.29999998
+      inSlope: -0.007952759
+      outSlope: -0.007952759
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  walkCurveWave:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: -0.19999999
+      inSlope: 0.041584156
+      outSlope: 0.041584156
+      tangentMode: 0
+    - time: 0.5
+      value: 0.19999999
+      inSlope: -0.010635704
+      outSlope: -0.010635704
+      tangentMode: 0
+    - time: 1
+      value: -0.19999999
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  animWalkSpeed: 0.5
+  animChaseSpeed: 1.5
 --- !u!195 &19579614
 NavMeshAgent:
   m_ObjectHideFlags: 1
@@ -152,7 +208,7 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 173700}
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 0.3
   m_Speed: 2
   m_Acceleration: 1000
   avoidancePriority: 50
