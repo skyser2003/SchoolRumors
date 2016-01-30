@@ -325,6 +325,94 @@ Transform:
   m_Children: []
   m_Father: {fileID: 449173469}
   m_RootOrder: 8
+--- !u!1 &367589803
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 367589804}
+  - 33: {fileID: 367589808}
+  - 64: {fileID: 367589807}
+  - 23: {fileID: 367589806}
+  - 114: {fileID: 367589805}
+  m_Layer: 0
+  m_Name: Stair door
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &367589804
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 367589803}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071067}
+  m_LocalPosition: {x: -0.31, y: -0.21427299, z: -1.45}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1713637075}
+  m_RootOrder: 2
+--- !u!114 &367589805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 367589803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2daa103bd1b43254bac49bf11b00b428, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionTextShow: You need all ritual items to go to the next floor
+--- !u!23 &367589806
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 367589803}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 7c50d23d89dfc2a4483f90be2f5415c0, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!64 &367589807
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 367589803}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!33 &367589808
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 367589803}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &449173468
 GameObject:
   m_ObjectHideFlags: 0
@@ -1145,6 +1233,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 1545202759}
   HealAmount: 0
+  DelayTime: 0
 --- !u!23 &1069667682
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1422,7 +1511,7 @@ Transform:
   - {fileID: 2052498145}
   - {fileID: 1545202763}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
 --- !u!1 &1336684874
 GameObject:
   m_ObjectHideFlags: 0
@@ -1824,6 +1913,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 2052498141}
+  ErrorText: 
 --- !u!1 &1539010092
 GameObject:
   m_ObjectHideFlags: 0
@@ -1852,7 +1942,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StageLevel: 0
-  FloorItemCount: 1
 --- !u!4 &1539010094
 Transform:
   m_ObjectHideFlags: 0
@@ -2033,7 +2122,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StageLevel: 0
-  FloorItemCount: 1
 --- !u!1 &1664666568
 GameObject:
   m_ObjectHideFlags: 0
@@ -2136,6 +2224,7 @@ Transform:
   m_Children:
   - {fileID: 210938557}
   - {fileID: 1513194202}
+  - {fileID: 367589804}
   m_Father: {fileID: 0}
   m_RootOrder: 5
 --- !u!1 &1793226953
