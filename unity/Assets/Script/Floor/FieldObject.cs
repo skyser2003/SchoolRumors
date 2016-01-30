@@ -4,7 +4,7 @@ class FieldObject : MonoBehaviour {
     public RitualItem item;
 
     public int HealAmount;
-
+    
     private void Start()
     {
         FieldObjectManager.Instance.Add(this);
