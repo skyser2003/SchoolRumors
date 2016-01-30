@@ -8,6 +8,9 @@ class DoorPuzzleObstacle : PuzzleObstacle {
 
     private PlayerUI playerUI;
 
+
+    public string LockedTextShow = "Door is locked";
+
     protected override void Start()
     {
         base.Start();
@@ -19,7 +22,7 @@ class DoorPuzzleObstacle : PuzzleObstacle {
     public override void Action(Player player)
     {
         if (isLockRequired == true && player.HandheldItem != keyItem) {
-            playerUI.SetErrorMessage("You need the right key to open this door.", 2);
+            playerUI.SetErrorMessage(LockedTextShow, 2);
             return;
         }
 
