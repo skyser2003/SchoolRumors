@@ -25,11 +25,13 @@ public class Ghost : Enemy
         if (currentState == PatrolState.patrol && audioSource.clip != patrolAudio)
         {
             audioSource.clip = patrolAudio;
+            audioSource.volume = 1.0f;
             audioSource.Play();
         }
         else if (currentState == PatrolState.chase && audioSource.clip != chaseAudio)
         {
             audioSource.clip = chaseAudio;
+            audioSource.volume = 0.3f;
             audioSource.Play();
         }
     }

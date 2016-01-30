@@ -24,7 +24,7 @@ public class Cutscene : MonoBehaviour
     void Awake()
     {
         isInCutscene = false;
-        audioSource = GetComponent<AudioSource>();
+        audioSource = cutsceneObjects.GetComponent<AudioSource>();
     }
 
     public void StartCutscene(CutsceneSlide[] newSlides)
@@ -40,8 +40,8 @@ public class Cutscene : MonoBehaviour
     void ShowSlide(int slideNum)
     {
         image.sprite = slides[slideNum].image;
+        image.gameObject.SetActive(image.sprite != null);
         dialog.text = slides[slideNum].dialog;
-
     }
 
 	void Update ()

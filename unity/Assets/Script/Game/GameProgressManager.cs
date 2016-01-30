@@ -27,7 +27,10 @@ class GameProgressManager {
     {
         GameObject.FindWithTag("Player").transform.position = ChangeFloor.lastTeleportPos;
         GameObject.FindWithTag("CameraSystem").GetComponent<PlayerCamera>().Reset();
-        GameObject.FindWithTag("UI").GetComponent<PlayerUI>().Reset();
+        GameObject UIObject = GameObject.FindWithTag("UI");
+        UIObject.GetComponent<PlayerUI>().Reset();
+        UIObject.GetComponent<Cutscene>().StartCutscene(UIObject.GetComponent<CutsceneContainer>().cutsceneSlides);
+        UIObject.GetComponent<AudioSource>().Play();
         Enemy.ResetAll();
     }
 }
