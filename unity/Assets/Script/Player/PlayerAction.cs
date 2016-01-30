@@ -47,8 +47,8 @@ class PlayerAction : MonoBehaviour {
             else if (handheldItem != null) {
                 handheldItem.GetPickedUp(player);
             }
-            else if (puzzleObstacle != null && player.HandheldItem != null) {
-                player.HandheldItem.Action(puzzleObstacle);
+            else if (puzzleObstacle != null) {
+                puzzleObstacle.Action(player);
             }
         }
     }

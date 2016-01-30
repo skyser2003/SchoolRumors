@@ -10,8 +10,6 @@ abstract class HandheldItem : MonoBehaviour {
         HandheldItemManager.Instance.Add(this);
     }
 
-    public abstract void Action(PuzzleObstacle obstacle);
-
     public void GetPickedUp(Player player)
     {
         this.player = player;
