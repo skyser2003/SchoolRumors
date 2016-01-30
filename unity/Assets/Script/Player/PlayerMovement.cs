@@ -68,7 +68,7 @@ public class PlayerMovement : MonoBehaviour {
 
     void LateUpdate()
     {
-        graphics.localScale = new Vector3(isFacingRight ? -1.0f : 1.0f, 1.0f, 1.0f);
+        graphics.localScale = new Vector3(isFacingRight ? 1.0f : -1.0f, 1.0f, 1.0f);
     }
 
     float animV;
