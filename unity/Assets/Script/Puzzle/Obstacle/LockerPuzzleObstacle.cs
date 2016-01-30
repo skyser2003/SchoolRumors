@@ -7,6 +7,10 @@
             return;
         }
 
+        if (player.HandheldItem == null || player.HandheldItem.GetType() != typeof(WrenchHandheldItem)) {
+            return;
+        }
+
         player.AcquireItem(item);
         item = null;
     }
