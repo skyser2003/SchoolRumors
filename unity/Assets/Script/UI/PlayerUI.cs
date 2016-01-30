@@ -10,12 +10,14 @@ public class PlayerUI : MonoBehaviour
     public int MaxHealth { get { return healthSprites.Length; } }
 
     float damagedTimer;
-    float damageRate = 2.0f;
+    float damageRate = 0.75f;
 
     public Text errorMessage;
     private float fadeOutTime;
 
     public GameObject[] ritualItemSprites;
+
+    public AudioSource audioDamage;
 
     void Awake()
     {
@@ -59,6 +61,8 @@ public class PlayerUI : MonoBehaviour
         if (Time.time > damagedTimer)
         {
             Debug.Log("Player got damaged!");
+
+            audioDamage.Play();
 
             damagedTimer = Time.time + damageRate;
             health--;
