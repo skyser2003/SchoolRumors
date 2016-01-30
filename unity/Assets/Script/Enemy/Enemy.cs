@@ -71,6 +71,9 @@ public class Enemy : MonoBehaviour
 	
 	void Update ()
     {
+        if (Cutscene.isInCutscene)
+            return;
+
         isFacingRight = agent.velocity.x > 0.0f;
 
         switch (currentState)

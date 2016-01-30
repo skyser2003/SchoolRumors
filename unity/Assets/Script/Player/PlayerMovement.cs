@@ -32,12 +32,22 @@ public class PlayerMovement : MonoBehaviour {
 
     private void FixedUpdate()
     {
+        if (Cutscene.isInCutscene)
+            return;
+
         var dt = Time.fixedDeltaTime;
         control.Move(direction * Speed * dt);
     }
 
     private void Update()
     {
+        if (Cutscene.isInCutscene)
+        {
+            direction = Vector3.zero;
+            return;
+        }
+            
+
         if (Input.GetKeyDown(KeyCode.LeftArrow)) {
             direction.x = -1;
             isFacingRight = false;
