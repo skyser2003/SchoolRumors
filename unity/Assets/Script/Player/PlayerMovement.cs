@@ -23,6 +23,8 @@ public class PlayerMovement : MonoBehaviour {
     public Texture crouchTexture;
     MeshRenderer meshRenderer;
 
+    public Transform rightHand;
+
     private void Start()
     {
         control = GetComponent<CharacterController>();
@@ -98,6 +100,11 @@ public class PlayerMovement : MonoBehaviour {
     void LateUpdate()
     {
         graphics.localScale = new Vector3(isFacingRight ? 1.0f : -1.0f, 1.0f, 1.0f);
+
+        var newHandPosition = rightHand.localPosition;
+        newHandPosition.x = Mathf.Abs(rightHand.localPosition.x) * (isFacingRight == true ? 1 : -1);
+
+        rightHand.localPosition = newHandPosition;
     }
 
     float animV;
