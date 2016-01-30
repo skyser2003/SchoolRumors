@@ -19,6 +19,11 @@ public class PlayerUI : MonoBehaviour
 
     public AudioSource audioDamage;
 
+    private Image gaugeBack;
+    private Image gaugeFront;
+    private float gaugeFillTime;
+    private float gaugeLeftTime;
+
     void Awake()
     {
         Reset();
@@ -34,6 +39,20 @@ public class PlayerUI : MonoBehaviour
             if(fadeOutTime <= 0) {
                 fadeOutTime = 0;
                 errorMessage.text = "";
+            }
+        }
+
+        if(gaugeFillTime != -1) {
+            gaugeLeftTime -= dt;
+
+            if(gaugeLeftTime <= 0) {
+                gaugeBack.gameObject.SetActive(false);
+                gaugeFront.gameObject.SetActive(false);
+                gaugeFillTime = -1;
+                gaugeLeftTime = -1;
+            }
+            else {
+                gaugeFront.fillAmount = (gaugeFillTime - gaugeLeftTime) / gaugeFillTime;
             }
         }
 
@@ -59,6 +78,14 @@ public class PlayerUI : MonoBehaviour
         {
             SetRitualItem(i, false);
         }
+
+        gaugeBack = transform.FindChild("GaugeBack").GetComponent<Image>();
+        gaugeFront = transform.FindChild("GaugeFront").GetComponent<Image>();
+
+        gaugeBack.gameObject.SetActive(false);
+        gaugeFront.gameObject.SetActive(false);
+        gaugeFillTime = -1;
+        gaugeLeftTime = -1;
     }
 
     void OnLevelWasLoaded(int level)
@@ -108,5 +135,14 @@ public class PlayerUI : MonoBehaviour
     public void SetRitualItem(int id, bool hasItem)
     {
         ritualItemSprites[id].SetActive(hasItem);
+    }
+
+    public void SetGaugeFillTime(float time)
+    {
+        gaugeFillTime = time;
+        gaugeLeftTime = time;
+        gaugeFront.fillAmount = 0;
+        gaugeBack.gameObject.SetActive(true);
+        gaugeFront.gameObject.SetActive(true);
     }
 }

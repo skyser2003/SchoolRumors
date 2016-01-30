@@ -4,6 +4,7 @@ using UnityEngine;
 class PlayerAction : MonoBehaviour {
     private Player player;
     private PlayerMovement playerMove;
+    private PlayerUI playerUI;
 
     private bool isSearching;
     private float curSearchTime;
@@ -15,6 +16,7 @@ class PlayerAction : MonoBehaviour {
     {
         player = GetComponent<Player>();
         playerMove = GetComponent<PlayerMovement>();
+        playerUI = GameObject.FindWithTag("UI").GetComponent<PlayerUI>();
     }
 
     private void Update()
@@ -62,6 +64,7 @@ class PlayerAction : MonoBehaviour {
                         searchingObject = fieldObject;
                         isSearching = true;
                         curSearchTime = fieldObject.DelayTime;
+                        playerUI.SetGaugeFillTime(curSearchTime);
                     }
                 }
                 else if (handheldItem != null) {
