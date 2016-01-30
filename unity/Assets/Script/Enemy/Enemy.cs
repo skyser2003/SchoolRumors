@@ -33,6 +33,10 @@ public class Enemy : MonoBehaviour
     public float animWalkSpeed = 1.0f;
     public float animChaseSpeed = 2.0f;
 
+    public AudioSource audioFoot;
+    float footStepTimer;
+    public float footStepRate = 0.25f;
+
     enum PatrolState
     {
         patrol,
@@ -211,7 +215,20 @@ public class Enemy : MonoBehaviour
             animV = 0.0f;
         }
 
-        if(speed <= 0.0f)
+        if (speed > 0.0f && audioFoot != null)
+        {
+            footStepTimer += Time.deltaTime;
+
+            if (footStepTimer > footStepRate)
+            {
+                footStepRate = 0.25f * Random.Range(0.95f, 1.05f);
+                footStepTimer = 0.0f;
+                audioFoot.pitch = Random.Range(0.9f, 1.1f);
+                audioFoot.Play();
+            }
+        }
+
+        if (speed <= 0.0f)
         {
             animV -= Time.deltaTime;
             animV = Mathf.Clamp01(animV);

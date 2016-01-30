@@ -19,10 +19,15 @@ public class PlayerMovement : MonoBehaviour {
     float footStepTimer;
     float footStepRate = 0.25f;
 
+    public Texture standTexture;
+    public Texture crouchTexture;
+    MeshRenderer meshRenderer;
+
     private void Start()
     {
         control = GetComponent<CharacterController>();
         graphicsOffset = graphics.localPosition;
+        meshRenderer = GetComponentInChildren<MeshRenderer>();
     }
 
     private void FixedUpdate()
@@ -66,6 +71,7 @@ public class PlayerMovement : MonoBehaviour {
             isCrouching = !isCrouching;
 
             control.height = isCrouching ? 0.5f : 1.01f;
+            meshRenderer.material.mainTexture = isCrouching ? crouchTexture : standTexture;
         }
         
 
@@ -93,7 +99,7 @@ public class PlayerMovement : MonoBehaviour {
             animV = 0.0f;
         }
 
-        if (speed > 0.0f)
+        if (speed > 0.0f && audioFoot != null)
         {
             footStepTimer += Time.deltaTime;
 
