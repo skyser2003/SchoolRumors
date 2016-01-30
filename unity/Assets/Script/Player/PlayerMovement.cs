@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour {
     public Transform graphics;
     Vector3 graphicsOffset;
     bool isFacingRight;
+    bool isCrouching;
 
     private void Start()
     {
@@ -56,7 +57,15 @@ public class PlayerMovement : MonoBehaviour {
             direction.z = 0;
         }
 
-        if(direction.magnitude > 0.0f)
+        if (Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.C))
+        {
+            isCrouching = !isCrouching;
+
+            control.height = isCrouching ? 0.5f : 1.01f;
+        }
+        
+
+        if (direction.magnitude > 0.0f)
         {
             UpdateWalkAnim(animSpeed);
         }

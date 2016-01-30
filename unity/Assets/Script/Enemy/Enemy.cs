@@ -111,7 +111,6 @@ public class Enemy : MonoBehaviour
     bool Look()
     {
         RaycastHit hit;
-        Vector3 rayOrigin = transform.position + Vector3.up * raycastHeight;
         float seeDistance = currentState == PatrolState.patrol ? 10.0f : 20.0f;
         float arcAngle = currentState == PatrolState.patrol ? 35.0f : 220.0f;
         int numLines = currentState == PatrolState.patrol ? 16 : 64;
@@ -122,41 +121,47 @@ public class Enemy : MonoBehaviour
         {
             if (cols[i].transform.tag == "Player")
             {
-                if (Physics.Linecast(transform.position + Vector3.up * raycastHeight, cols[i].transform.position, out hit))
+                if (Physics.Linecast(transform.position + Vector3.up * 0.5f, cols[i].transform.position, out hit))
                 {
                     if (hit.transform.tag == "Player")
                     {
-                        Debug.DrawLine(rayOrigin, hit.point, Color.red);
+                        Debug.DrawLine(transform.position + Vector3.up * 0.5f, hit.point, Color.red);
                         OnSpotPlayer(hit.transform);
                         isTouching = true;
                         return true;
                     }
                     else
                     {
-                        Debug.DrawLine(rayOrigin, hit.point, Color.yellow);
+                        Debug.DrawLine(transform.position + Vector3.up * 0.5f, hit.point, Color.yellow);
                     }
                 }
             }
         }
 
-        for (int i = 0; i < numLines; ++i)
+        for (int h = 0; h < 2; ++h)
         {
-            Vector3 rayDirection = Quaternion.AngleAxis(-1 * arcAngle / 2 + (i * arcAngle / numLines) + arcAngle / (2 * numLines), Vector3.up) * (isFacingRight ? Vector3.right : Vector3.left);
+            raycastHeight = h == 0 ? 0.5f : 0.95f;
+            Vector3 rayOrigin = transform.position + Vector3.up * raycastHeight;
 
-            if (Physics.Raycast(rayOrigin, rayDirection, out hit, seeDistance))
+            for (int i = 0; i < numLines; ++i)
             {
-                Debug.DrawLine(rayOrigin, hit.point, Color.yellow);
+                Vector3 rayDirection = Quaternion.AngleAxis(-1 * arcAngle / 2 + (i * arcAngle / numLines) + arcAngle / (2 * numLines), Vector3.up) * (isFacingRight ? Vector3.right : Vector3.left);
 
-                if(hit.transform.tag == "Player")
+                if (Physics.Raycast(rayOrigin, rayDirection, out hit, seeDistance))
                 {
-                    Debug.DrawLine(rayOrigin, hit.point, Color.red);
-                    OnSpotPlayer(hit.transform);
-                    return true;
+                    Debug.DrawLine(rayOrigin, hit.point, Color.yellow);
+
+                    if (hit.transform.tag == "Player")
+                    {
+                        Debug.DrawLine(rayOrigin, hit.point, Color.red);
+                        OnSpotPlayer(hit.transform);
+                        return true;
+                    }
                 }
-            }
-            else
-            {
-                Debug.DrawLine(rayOrigin, rayOrigin + rayDirection * seeDistance, Color.green);
+                else
+                {
+                    Debug.DrawLine(rayOrigin, rayOrigin + rayDirection * seeDistance, Color.green);
+                }
             }
         }
 
@@ -166,7 +171,7 @@ public class Enemy : MonoBehaviour
 
     void Chase()
     {
-        Debug.DrawLine(transform.position + Vector3.up * raycastHeight, agent.destination + Vector3.up * raycastHeight, Color.red);
+        Debug.DrawLine(transform.position + Vector3.up * raycastHeight, agent.destination + Vector3.up * 0.5f, Color.red);
 
         agent.SetDestination(chaseTarget);
         agent.speed = isWaiting ? 0.0f : chaseSpeed;
