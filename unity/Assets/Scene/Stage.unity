@@ -281,6 +281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f8e1129af62f3746b57315719ab5132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DelayTime: 0
   isLockRequired: 1
   keyItem: {fileID: 788804559}
   LockedTextShow: Door is locked
@@ -653,6 +654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f8e1129af62f3746b57315719ab5132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DelayTime: 0
   isLockRequired: 0
   keyItem: {fileID: 0}
   LockedTextShow: Door is locked
@@ -2067,6 +2069,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f8e1129af62f3746b57315719ab5132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DelayTime: 0
   isLockRequired: 0
   keyItem: {fileID: 0}
   LockedTextShow: Door is locked
@@ -4736,6 +4739,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f8e1129af62f3746b57315719ab5132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DelayTime: 0
   isLockRequired: 1
   keyItem: {fileID: 162439233}
   LockedTextShow: Door is locked
@@ -6715,6 +6719,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f8e1129af62f3746b57315719ab5132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DelayTime: 0
   isLockRequired: 1
   keyItem: {fileID: 2031341031}
   LockedTextShow: Door is locked
@@ -7277,6 +7282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f8e1129af62f3746b57315719ab5132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DelayTime: 0
   isLockRequired: 1
   keyItem: {fileID: 162439233}
   LockedTextShow: Door is locked
@@ -8481,6 +8487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f8e1129af62f3746b57315719ab5132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DelayTime: 0
   isLockRequired: 1
   keyItem: {fileID: 1951400833}
   LockedTextShow: Door is locked
@@ -11448,6 +11455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f8e1129af62f3746b57315719ab5132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DelayTime: 0
   isLockRequired: 1
   keyItem: {fileID: 2031341031}
   LockedTextShow: Door is locked
@@ -11678,7 +11686,7 @@ Transform:
   - {fileID: 2142629345}
   - {fileID: 905337902}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!1 &1122741599
 GameObject:
   m_ObjectHideFlags: 0
@@ -12830,6 +12838,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f8e1129af62f3746b57315719ab5132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DelayTime: 0
   isLockRequired: 1
   keyItem: {fileID: 1951400833}
   LockedTextShow: Door is locked
@@ -13048,7 +13057,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1283421963
 Transform:
   m_ObjectHideFlags: 0
@@ -14157,6 +14166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f8e1129af62f3746b57315719ab5132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DelayTime: 0
   isLockRequired: 1
   keyItem: {fileID: 464680596}
   LockedTextShow: Door is locked
@@ -15074,6 +15084,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f8e1129af62f3746b57315719ab5132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DelayTime: 0
   isLockRequired: 1
   keyItem: {fileID: 788804559}
   LockedTextShow: Door is locked
@@ -16138,6 +16149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2daa103bd1b43254bac49bf11b00b428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DelayTime: 0
   ConditionTextShow: You need all ritual items to go to the next floor
   FloorLevel: 2
 --- !u!1 &1506430879
@@ -16371,6 +16383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f8e1129af62f3746b57315719ab5132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DelayTime: 0
   isLockRequired: 0
   keyItem: {fileID: 0}
   LockedTextShow: Door is locked
@@ -17336,6 +17349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdedec3e2063cfc4aab8c4755161d55e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DelayTime: 0
   item: {fileID: 1987626501}
   ErrorText: Need wrench to destroy key
 --- !u!1 &1610345242
@@ -18543,6 +18557,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f8e1129af62f3746b57315719ab5132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DelayTime: 0
   isLockRequired: 0
   keyItem: {fileID: 1472055204}
   LockedTextShow: Door is locked
@@ -18650,6 +18665,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f8e1129af62f3746b57315719ab5132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DelayTime: 0
   isLockRequired: 0
   keyItem: {fileID: 0}
   LockedTextShow: Door is locked
@@ -20822,6 +20838,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f8e1129af62f3746b57315719ab5132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DelayTime: 0
   isLockRequired: 1
   keyItem: {fileID: 1987626501}
   LockedTextShow: Key must be in Ami's belongings.
@@ -21862,6 +21879,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2daa103bd1b43254bac49bf11b00b428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DelayTime: 0
   ConditionTextShow: You need all ritual items to go to the next floor
   FloorLevel: 1
 --- !u!1 &2119675222
@@ -22196,6 +22214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f8e1129af62f3746b57315719ab5132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DelayTime: 0
   isLockRequired: 0
   keyItem: {fileID: 2044193965}
   LockedTextShow: Door is locked
