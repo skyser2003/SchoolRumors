@@ -63,6 +63,7 @@ class PlayerAction : MonoBehaviour {
                 }
                 else if (handheldItem != null) {
                     handheldItem.GetPickedUp(player);
+                    handheldItem.GetComponent<Renderer>().material.shader = Shader.Find("Standard");
                 }
                 else if (puzzleObstacle != null) {
                     puzzleObstacle.Action(player);
