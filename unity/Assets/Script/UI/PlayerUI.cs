@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using UnityEngine.UI;
 
 public class PlayerUI : MonoBehaviour
 {
@@ -11,9 +12,26 @@ public class PlayerUI : MonoBehaviour
     float damagedTimer;
     float damageRate = 2.0f;
 
+    public Text errorMessage;
+    private float fadeOutTime;
+
     void Awake()
     {
         Reset();
+    }
+
+    void Update()
+    {
+        var dt = Time.deltaTime;
+
+        if (fadeOutTime != 0) {
+            fadeOutTime -= dt;
+
+            if(fadeOutTime <= 0) {
+                fadeOutTime = 0;
+                errorMessage.text = "";
+            }
+        }
     }
 
     public void Reset()
@@ -24,6 +42,9 @@ public class PlayerUI : MonoBehaviour
         {
             healthSprites[i].SetActive(true);
         }
+
+        errorMessage.text = "";
+        fadeOutTime = 0;
     }
 
     void OnLevelWasLoaded(int level)
@@ -60,5 +81,11 @@ public class PlayerUI : MonoBehaviour
         for (int i = 0; i < healthSprites.Length; ++i) {
             healthSprites[i].SetActive(health >= i);
         }
+    }
+
+    public void SetErrorMessage(string text, float fadeOutTime)
+    {
+        errorMessage.text = text;
+        this.fadeOutTime = fadeOutTime;
     }
 }
