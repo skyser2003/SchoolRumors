@@ -65,9 +65,7 @@ class PlayerAction : MonoBehaviour {
                 var puzzleObstacle = nearestObj as PuzzleObstacle;
 
                 if (fieldObject != null) {
-                    if (fieldObject.item != null) {
-                        SetDelayedAction(() => fieldObject.Action(player), fieldObject.DelayTime);
-                    }
+                    SetDelayedAction(() => fieldObject.Action(player), fieldObject.DelayTime);
                 }
                 else if (handheldItem != null) {
                     handheldItem.GetPickedUp(player);
