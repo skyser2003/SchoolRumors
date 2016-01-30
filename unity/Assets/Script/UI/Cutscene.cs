@@ -19,9 +19,12 @@ public class Cutscene : MonoBehaviour
     public Image image;
     public Text dialog;
 
+    AudioSource audioSource;
+
     void Awake()
     {
         isInCutscene = false;
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void StartCutscene(CutsceneSlide[] newSlides)
@@ -31,12 +34,14 @@ public class Cutscene : MonoBehaviour
         isInCutscene = true;
         ShowSlide(currentSlide);
         cutsceneObjects.SetActive(true);
+        audioSource.Play();
     }
 
     void ShowSlide(int slideNum)
     {
         image.sprite = slides[slideNum].image;
         dialog.text = slides[slideNum].dialog;
+
     }
 
 	void Update ()
@@ -45,6 +50,8 @@ public class Cutscene : MonoBehaviour
         {
             if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
             {
+                audioSource.Play();
+
                 currentSlide++;
 
                 if (currentSlide >= slides.Length)

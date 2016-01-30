@@ -244,7 +244,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1f3b62bbcf99e5246a47ec05cc8ff3b4, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c4244586a285ce8459fb05acd5090c99, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -455,6 +455,8 @@ MonoBehaviour:
   animChaseSpeed: 0
   audioFoot: {fileID: 8299080}
   footStepRate: 0.25
+  PatrolSeeDistance: 10
+  DetectedSeeDistance: 20
   spotlight: {fileID: 445314}
 --- !u!195 &19577906
 NavMeshAgent:

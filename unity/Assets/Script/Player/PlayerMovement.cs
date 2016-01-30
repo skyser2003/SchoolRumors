@@ -127,7 +127,7 @@ public class PlayerMovement : MonoBehaviour {
             {
                 footStepRate = 0.25f * Random.Range(0.95f, 1.05f);
                 footStepTimer = 0.0f;
-                audioFoot.pitch = Random.Range(0.9f, 1.1f);
+                audioFoot.pitch = Random.Range(0.9f, 1.2f);
                 audioFoot.Play();
             }
         }
