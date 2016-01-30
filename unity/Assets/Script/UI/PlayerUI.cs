@@ -36,6 +36,11 @@ public class PlayerUI : MonoBehaviour
                 errorMessage.text = "";
             }
         }
+
+        if(Input.GetKeyDown(KeyCode.K))
+        {
+            TakeDamage();
+        }
     }
 
     public void Reset()
@@ -49,6 +54,11 @@ public class PlayerUI : MonoBehaviour
 
         errorMessage.text = "";
         fadeOutTime = 0;
+
+        for (int i = 0; i < 3; ++i)
+        {
+            SetRitualItem(i, false);
+        }
     }
 
     void OnLevelWasLoaded(int level)
