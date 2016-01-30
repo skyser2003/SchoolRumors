@@ -368,6 +368,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ConditionTextShow: You need all ritual items to go to the next floor
+  FloorLevel: 1
 --- !u!23 &367589806
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1981,6 +1982,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc89202450197d947af0000862cb1a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FloorLevel: 0
   id: 1
 --- !u!4 &1545202763
 Transform:
@@ -2525,6 +2527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc89202450197d947af0000862cb1a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FloorLevel: 1
   id: 0
 --- !u!4 &2052498145
 Transform:

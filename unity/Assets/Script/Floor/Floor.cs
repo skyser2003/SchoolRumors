@@ -11,14 +11,14 @@ class Floor : MonoBehaviour {
 
     private bool CheckCondition(Player player)
     {
-        return player.Inventory.Count == RitualItem.allItems.Count;
+        return RitualItem.HaveAllRitualItems(player.Inventory, StageLevel);
     }
 
     public void ProceedToNextFloor(Player player)
     {
         if (CheckCondition(player) == false) {
             // TODO : show error message
-            Debug.Log("Item count condition not met : Current item count = " + player.Inventory.Count + ", required item count = " + RitualItem.allItems.Count);
+            Debug.Log("Item count condition not met : Current item count = " + player.Inventory.Count(StageLevel) + ", required item count = " + RitualItem.Count(StageLevel));
         }
         else {
             Debug.Log("Proceed to next level!");

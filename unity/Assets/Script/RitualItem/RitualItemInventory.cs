@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using UnityEngine;
 
-class RitualItemInventory : MonoBehaviour
-{
+class RitualItemInventory : MonoBehaviour {
     private List<RitualItem> itemList = new List<RitualItem>();
 
-    public int Count { get { return itemList.Count; } }
+    public ReadOnlyCollection<RitualItem> ItemList { get { return itemList.AsReadOnly(); } }
 
     PlayerUI playerUI;
     public AudioSource audioGetItem;
@@ -20,5 +20,18 @@ class RitualItemInventory : MonoBehaviour
         audioGetItem.Play();
         playerUI.SetRitualItem(item.id, true);
         itemList.Add(item);
+    }
+
+    public int Count(int floorLevel)
+    {
+        int count = 0;
+
+        foreach (var item in itemList) {
+            if (item.FloorLevel == floorLevel) {
+                ++count;
+            }
+        }
+
+        return count;
     }
 }

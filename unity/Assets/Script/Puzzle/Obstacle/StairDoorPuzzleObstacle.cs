@@ -5,6 +5,7 @@ class StairDoorPuzzleObstacle : PuzzleObstacle {
     private bool isOpen;
 
     public string ConditionTextShow = "You need all ritual items to go to the next floor";
+    public int FloorLevel;
 
     protected override void Start()
     {
@@ -16,7 +17,7 @@ class StairDoorPuzzleObstacle : PuzzleObstacle {
 
     public override void Action(Player player)
     {
-        if (player.Inventory.Count != RitualItem.allItems.Count) {
+        if (RitualItem.HaveAllRitualItems(player.Inventory, FloorLevel) == false) {
             playerUI.SetErrorMessage(ConditionTextShow, 2);
             return;
         }
