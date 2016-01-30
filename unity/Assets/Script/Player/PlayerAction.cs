@@ -41,9 +41,9 @@ class PlayerAction : MonoBehaviour {
 
         if (nearestObj != null && nearestObj != prevNearestObj) {
             if (prevNearestObj != null) {
-                prevNearestObj.GetComponent<Renderer>().material.shader = Shader.Find("Standard");
+                prevNearestObj.GetComponentInChildren<Renderer>().material.shader = Shader.Find("Standard");
             }
-            nearestObj.GetComponent<Renderer>().material.shader = Shader.Find("Unlit/Transparent Cutout");
+            nearestObj.GetComponentInChildren<Renderer>().material.shader = Shader.Find("Unlit/Transparent Cutout");
 
             prevNearestObj = nearestObj;
         }
@@ -63,7 +63,7 @@ class PlayerAction : MonoBehaviour {
                 }
                 else if (handheldItem != null) {
                     handheldItem.GetPickedUp(player);
-                    handheldItem.GetComponent<Renderer>().material.shader = Shader.Find("Standard");
+                    handheldItem.GetComponentInChildren<Renderer>().material.shader = Shader.Find("Standard");
                 }
                 else if (puzzleObstacle != null) {
                     puzzleObstacle.Action(player);
