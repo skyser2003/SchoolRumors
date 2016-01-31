@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-class RitualItem : MonoBehaviour
-{
+class RitualItem : MonoBehaviour {
     public static List<RitualItem> allItems = new List<RitualItem>();
     Vector3 startPos;
 
@@ -30,6 +29,7 @@ class RitualItem : MonoBehaviour
     void Awake()
     {
         allItems.Add(this);
+        startPos = transform.position;
     }
 
     public static void ResetAll()
@@ -37,8 +37,7 @@ class RitualItem : MonoBehaviour
         if (VisitRoof.hasVisited)
             return;
 
-        for(int i = 0; i < allItems.Count; ++i)
-        {
+        for (int i = 0; i < allItems.Count; ++i) {
             allItems[i].Reset();
         }
     }
