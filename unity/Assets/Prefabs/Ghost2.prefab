@@ -365,8 +365,8 @@ MonoBehaviour:
   animChaseSpeed: 1.5
   audioFoot: {fileID: 0}
   footStepRate: 0.25
-  PatrolSeeDistance: 10
-  DetectedSeeDistance: 20
+  PatrolSeeDistance: 3
+  DetectedSeeDistance: 8
   patrolTexture: {fileID: 2800000, guid: bc4de52445fa2ed49b223a139adf0c9b, type: 3}
   chaseTexture: {fileID: 2800000, guid: 5f4a30a6001f546458bcb4fe90084e19, type: 3}
   patrolAudio: {fileID: 8300000, guid: a6f3fc7766de25148a294778b13a8cc8, type: 3}
@@ -406,6 +406,14 @@ Prefab:
       propertyPath: chaseTexture
       value: 
       objectReference: {fileID: 2800000, guid: 5f4a30a6001f546458bcb4fe90084e19, type: 3}
+    - target: {fileID: 0}
+      propertyPath: PatrolSeeDistance
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: DetectedSeeDistance
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 173700}

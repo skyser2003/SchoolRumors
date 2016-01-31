@@ -164,7 +164,7 @@ public class Enemy : MonoBehaviour
     {
         RaycastHit hit;
         float seeDistance = currentState == PatrolState.patrol ? PatrolSeeDistance : DetectedSeeDistance;
-        float arcAngle = currentState == PatrolState.patrol ? 35.0f : 220.0f;
+        float arcAngle = currentState == PatrolState.patrol ? 40.0f : 220.0f;
         int numLines = currentState == PatrolState.patrol ? 16 : 64;
         isTouching = false;
 
