@@ -25,18 +25,6 @@ class PuzzleObstacleManager {
 
     public PuzzleObstacle FindClosest(Vector3 pos, float maxDistance)
     {
-        //remove all nulls
-        for (int iter = 0; iter < obstacleList.Count;)
-        {
-            if (obstacleList[iter] == null)
-            {
-                obstacleList.RemoveAt(iter);
-            }
-            else
-            {
-                iter++;
-            }
-        }
 
         PuzzleObstacle closest = null;
         float closestDistance = 0;

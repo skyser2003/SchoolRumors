@@ -25,17 +25,6 @@ class FieldObjectManager {
 
     public FieldObject FindClosest(Vector3 pos, float maxDistance)
     {
-        //remove all nulls
-        for(int iter = 0; iter < objList.Count;)
-        {
-            if(objList[iter] == null)
-            {
-                objList.RemoveAt(iter);
-            }else
-            {
-                iter++;
-            }
-        }
         FieldObject closest = null;
         float closestDistance = 0;
 
