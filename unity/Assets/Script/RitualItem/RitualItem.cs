@@ -34,6 +34,9 @@ class RitualItem : MonoBehaviour
 
     public static void ResetAll()
     {
+        if (VisitRoof.hasVisited)
+            return;
+
         for(int i = 0; i < allItems.Count; ++i)
         {
             allItems[i].Reset();
