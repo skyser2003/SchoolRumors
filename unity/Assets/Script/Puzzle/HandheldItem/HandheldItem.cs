@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-abstract class HandheldItem : MonoBehaviour {
+public abstract class HandheldItem : MonoBehaviour {
     protected Player player;
     public bool IsHeldByPlayer;
     public string tooltip;

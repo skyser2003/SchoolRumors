@@ -1,12 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-class RitualItem : MonoBehaviour
-{
+public class RitualItem : MonoBehaviour {
     public static List<RitualItem> allItems = new List<RitualItem>();
-    Vector3 startPos;
 
     public static bool[] savedItems = new bool[3];
+
+    private Vector3 startPos;
+    private FieldObject fieldObj;
+
+    public void Init(FieldObject fieldObj)
+    {
+        this.fieldObj = fieldObj;
+    }
 
     public static bool HaveAllRitualItems(RitualItemInventory inventory, int floorLevel)
     {
@@ -39,8 +45,7 @@ class RitualItem : MonoBehaviour
     {
 
         for (int i = 0; i < allItems.Count; ++i) {
-            if (!savedItems[i])
-            {
+            if (!savedItems[i]) {
                 allItems[i].Reset();
             }
         }
@@ -49,6 +54,7 @@ class RitualItem : MonoBehaviour
     public void Reset()
     {
         transform.position = startPos;
+        fieldObj.item = this;
     }
 
     public int FloorLevel;

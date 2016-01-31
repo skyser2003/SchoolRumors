@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-class Player : MonoBehaviour {
+public class Player : MonoBehaviour {
     private PlayerUI playerUI;
 
     private RitualItemInventory inventory;
