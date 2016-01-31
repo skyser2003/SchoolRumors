@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-public class RitualItem : MonoBehaviour
+public class RitualItem : MonoBehaviour {
     public static List<RitualItem> allItems = new List<RitualItem>();
 
     public static bool[] savedItems = new bool[3];
