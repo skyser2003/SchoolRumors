@@ -61,7 +61,7 @@ class PlayerAction : MonoBehaviour {
             prevNearestObj = null;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space)) {
+        if (Cutscene.isInCutscene == false && Input.GetKeyDown(KeyCode.Space)) {
             if (nearestObj != null) {
                 var fieldObject = nearestObj as FieldObject;
                 var handheldItem = nearestObj as HandheldItem;
