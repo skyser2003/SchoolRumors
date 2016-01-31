@@ -443,7 +443,7 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.00001}
+  m_Extents: {x: 0.395, y: 0.5, z: 0.00001}
   m_MoveThreshold: 0.1
   m_Carve: 0
   m_CarveOnlyStationary: 1
@@ -460,7 +460,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.9999999, y: 1, z: 6.123233e-17}
+  m_Size: {x: 0.85, y: 1, z: 6.123233e-17}
   m_Center: {x: 0.00000023841858, y: 0, z: 0.0000019073486}
 --- !u!23 &12408788
 MeshRenderer:
@@ -875,6 +875,7 @@ MonoBehaviour:
   isLockRequired: 1
   keyItem: {fileID: 788804559}
   LockedTextShow: Door is locked
+  initangle: 0
 --- !u!1001 &39149570
 Prefab:
   m_ObjectHideFlags: 0
@@ -1614,6 +1615,7 @@ MonoBehaviour:
   isLockRequired: 0
   keyItem: {fileID: 0}
   LockedTextShow: Door is locked
+  initangle: 0
 --- !u!1 &60995755
 GameObject:
   m_ObjectHideFlags: 0
@@ -2090,6 +2092,7 @@ MonoBehaviour:
   isLockRequired: 0
   keyItem: {fileID: 0}
   LockedTextShow: Door is locked
+  initangle: 0
 --- !u!1 &86972639
 GameObject:
   m_ObjectHideFlags: 0
@@ -3495,6 +3498,7 @@ MonoBehaviour:
   isLockRequired: 0
   keyItem: {fileID: 0}
   LockedTextShow: Door is locked
+  initangle: 0
 --- !u!1 &142182082
 GameObject:
   m_ObjectHideFlags: 0
@@ -5567,6 +5571,7 @@ MonoBehaviour:
   isLockRequired: 0
   keyItem: {fileID: 0}
   LockedTextShow: Door is locked
+  initangle: 0
 --- !u!1 &220207189
 GameObject:
   m_ObjectHideFlags: 0
@@ -6127,7 +6132,7 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.00001}
+  m_Extents: {x: 0.33, y: 0.5, z: 0.00001}
   m_MoveThreshold: 0.1
   m_Carve: 0
   m_CarveOnlyStationary: 1
@@ -6143,7 +6148,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.9999999, y: 1, z: 6.123233e-17}
+  m_Size: {x: 0.71, y: 1, z: 6.123233e-17}
   m_Center: {x: 0.00000023841858, y: 0, z: 0.0000019073486}
 --- !u!23 &241407838
 MeshRenderer:
@@ -7179,6 +7184,7 @@ MonoBehaviour:
   isLockRequired: 0
   keyItem: {fileID: 0}
   LockedTextShow: Door is locked
+  initangle: 0
 --- !u!1 &273461936
 GameObject:
   m_ObjectHideFlags: 0
@@ -7374,7 +7380,7 @@ Transform:
   - {fileID: 15764745}
   - {fileID: 1384142196}
   m_Father: {fileID: 567254182}
-  m_RootOrder: 31
+  m_RootOrder: 28
 --- !u!1 &290446843
 GameObject:
   m_ObjectHideFlags: 0
@@ -8095,7 +8101,7 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.00001}
+  m_Extents: {x: 0.35, y: 0.5, z: 0.00001}
   m_MoveThreshold: 0.1
   m_Carve: 0
   m_CarveOnlyStationary: 1
@@ -8111,7 +8117,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.9999999, y: 1, z: 6.123233e-17}
+  m_Size: {x: 0.78, y: 1, z: 6.123233e-17}
   m_Center: {x: 0.00000023841858, y: 0, z: 0.0000019073486}
 --- !u!23 &323799858
 MeshRenderer:
@@ -9336,7 +9342,7 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.00001}
+  m_Extents: {x: 0.365, y: 0.5, z: 0.00001}
   m_MoveThreshold: 0.1
   m_Carve: 0
   m_CarveOnlyStationary: 1
@@ -9352,7 +9358,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.9999999, y: 1, z: 6.123233e-17}
+  m_Size: {x: 0.76, y: 1, z: 6.123233e-17}
   m_Center: {x: 0.00000023841858, y: 0, z: 0.0000019073486}
 --- !u!23 &369515610
 MeshRenderer:
@@ -9705,7 +9711,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 567254182}
-  m_RootOrder: 24
+  m_RootOrder: 23
 --- !u!65 &382513752
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10372,7 +10378,7 @@ Transform:
   m_Children:
   - {fileID: 350033855}
   m_Father: {fileID: 451131846}
-  m_RootOrder: 22
+  m_RootOrder: 19
 --- !u!1 &407208478
 GameObject:
   m_ObjectHideFlags: 0
@@ -10493,8 +10499,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DelayTime: 0
   isLockRequired: 1
-  keyItem: {fileID: 0}
+  keyItem: {fileID: 1676260676}
   LockedTextShow: Can't leave the room
+  initangle: 0
 --- !u!1 &413446056
 GameObject:
   m_ObjectHideFlags: 0
@@ -11623,15 +11630,16 @@ Transform:
   - {fileID: 1586624834}
   - {fileID: 536568944}
   - {fileID: 1646906236}
-  - {fileID: 1908253353}
   - {fileID: 2138032566}
-  - {fileID: 1024489382}
-  - {fileID: 879747271}
   - {fileID: 405321385}
   - {fileID: 2143596439}
   - {fileID: 917348591}
+  - {fileID: 1908253353}
   - {fileID: 1349601317}
+  - {fileID: 1024489382}
+  - {fileID: 879747271}
   - {fileID: 2094017271}
+  - {fileID: 1850602413}
   m_Father: {fileID: 0}
   m_RootOrder: 6
 --- !u!114 &451131847
@@ -11769,6 +11777,7 @@ MonoBehaviour:
   isLockRequired: 0
   keyItem: {fileID: 0}
   LockedTextShow: Door is locked
+  initangle: 0
 --- !u!1 &456583447
 GameObject:
   m_ObjectHideFlags: 0
@@ -11991,6 +12000,7 @@ MonoBehaviour:
   isLockRequired: 1
   keyItem: {fileID: 162439233}
   LockedTextShow: Door is locked
+  initangle: 0
 --- !u!1 &460726082
 GameObject:
   m_ObjectHideFlags: 0
@@ -12892,6 +12902,7 @@ MonoBehaviour:
   isLockRequired: 0
   keyItem: {fileID: 0}
   LockedTextShow: Door is locked
+  initangle: 0
 --- !u!1 &484398492
 GameObject:
   m_ObjectHideFlags: 0
@@ -13203,7 +13214,7 @@ Transform:
   m_Children:
   - {fileID: 1149712886}
   m_Father: {fileID: 1417178348}
-  m_RootOrder: 26
+  m_RootOrder: 22
 --- !u!1 &510964342
 GameObject:
   m_ObjectHideFlags: 0
@@ -13700,6 +13711,7 @@ MonoBehaviour:
   isLockRequired: 0
   keyItem: {fileID: 0}
   LockedTextShow: Door is locked
+  initangle: 0
 --- !u!1 &536323114
 GameObject:
   m_ObjectHideFlags: 0
@@ -14345,15 +14357,15 @@ Transform:
   - {fileID: 1838152919}
   - {fileID: 1164800943}
   - {fileID: 675138410}
-  - {fileID: 720768886}
   - {fileID: 382513751}
+  - {fileID: 720768886}
   - {fileID: 2107629719}
-  - {fileID: 1065145161}
   - {fileID: 782876810}
+  - {fileID: 1065145161}
+  - {fileID: 286728262}
   - {fileID: 1979766458}
   - {fileID: 1728353104}
   - {fileID: 1602905919}
-  - {fileID: 286728262}
   - {fileID: 1414706104}
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -14862,7 +14874,7 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.00001}
+  m_Extents: {x: 0.32, y: 0.5, z: 0.00001}
   m_MoveThreshold: 0.1
   m_Carve: 0
   m_CarveOnlyStationary: 1
@@ -14879,7 +14891,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.9999999, y: 1, z: 6.123233e-17}
+  m_Size: {x: 0.57, y: 1, z: 6.123233e-17}
   m_Center: {x: 0.00000023841858, y: 0, z: 0.0000019073486}
 --- !u!23 &596716791
 MeshRenderer:
@@ -16607,6 +16619,7 @@ MonoBehaviour:
   isLockRequired: 0
   keyItem: {fileID: 0}
   LockedTextShow: Door is locked
+  initangle: 0
 --- !u!1 &658713431
 GameObject:
   m_ObjectHideFlags: 0
@@ -17073,6 +17086,7 @@ MonoBehaviour:
   isLockRequired: 1
   keyItem: {fileID: 2031341031}
   LockedTextShow: Door is locked
+  initangle: 0
 --- !u!1 &672848681
 GameObject:
   m_ObjectHideFlags: 0
@@ -18508,6 +18522,7 @@ MonoBehaviour:
   isLockRequired: 1
   keyItem: {fileID: 162439233}
   LockedTextShow: Door is locked
+  initangle: 0
 --- !u!1 &713117967
 GameObject:
   m_ObjectHideFlags: 0
@@ -19587,7 +19602,7 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.00001}
+  m_Extents: {x: 0.395, y: 0.5, z: 0.00001}
   m_MoveThreshold: 0.1
   m_Carve: 0
   m_CarveOnlyStationary: 1
@@ -19603,7 +19618,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.9999999, y: 1, z: 6.123233e-17}
+  m_Size: {x: 0.72, y: 1, z: 6.123233e-17}
   m_Center: {x: 0.00000023841858, y: 0, z: 0.0000019073486}
 --- !u!23 &754495442
 MeshRenderer:
@@ -20401,7 +20416,7 @@ Transform:
   - {fileID: 1387530527}
   - {fileID: 252638415}
   m_Father: {fileID: 567254182}
-  m_RootOrder: 27
+  m_RootOrder: 26
 --- !u!1 &785480464
 GameObject:
   m_ObjectHideFlags: 0
@@ -21076,6 +21091,7 @@ MonoBehaviour:
   isLockRequired: 0
   keyItem: {fileID: 0}
   LockedTextShow: Door is locked
+  initangle: 0
 --- !u!1 &821861656
 GameObject:
   m_ObjectHideFlags: 0
@@ -21347,6 +21363,7 @@ MonoBehaviour:
   isLockRequired: 1
   keyItem: {fileID: 1951400833}
   LockedTextShow: Door is locked
+  initangle: 0
 --- !u!1001 &830540781
 Prefab:
   m_ObjectHideFlags: 0
@@ -21613,7 +21630,7 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.00001}
+  m_Extents: {x: 0.29, y: 0.5, z: 0.00001}
   m_MoveThreshold: 0.1
   m_Carve: 0
   m_CarveOnlyStationary: 1
@@ -22251,7 +22268,7 @@ MonoBehaviour:
   DelayTime: 1
   EmptyTextShow: No Item
   GainItemObject: {fileID: 1360104749}
-  PlayerSpeedChange: 1.5
+  PlayerSpeedChange: 2.3
 --- !u!1 &855916585
 GameObject:
   m_ObjectHideFlags: 0
@@ -22558,6 +22575,7 @@ MonoBehaviour:
   isLockRequired: 0
   keyItem: {fileID: 0}
   LockedTextShow: Key must be in Ami's belongings.
+  initangle: 0
 --- !u!1 &863007761
 GameObject:
   m_ObjectHideFlags: 0
@@ -24039,6 +24057,7 @@ MonoBehaviour:
   isLockRequired: 0
   keyItem: {fileID: 0}
   LockedTextShow: Door is locked
+  initangle: 0
 --- !u!1001 &905337901
 Prefab:
   m_ObjectHideFlags: 0
@@ -24651,7 +24670,7 @@ Transform:
   m_Children:
   - {fileID: 739855338}
   m_Father: {fileID: 451131846}
-  m_RootOrder: 24
+  m_RootOrder: 21
 --- !u!1001 &919115638
 Prefab:
   m_ObjectHideFlags: 0
@@ -25852,7 +25871,7 @@ Transform:
   - {fileID: 1606234036}
   - {fileID: 81286484}
   m_Father: {fileID: 1417178348}
-  m_RootOrder: 23
+  m_RootOrder: 21
 --- !u!1 &968850670
 GameObject:
   m_ObjectHideFlags: 0
@@ -26053,6 +26072,7 @@ MonoBehaviour:
   isLockRequired: 0
   keyItem: {fileID: 0}
   LockedTextShow: Door is locked
+  initangle: 0
 --- !u!1 &971013229
 GameObject:
   m_ObjectHideFlags: 0
@@ -26977,7 +26997,7 @@ Transform:
   m_Children:
   - {fileID: 773225336}
   m_Father: {fileID: 1417178348}
-  m_RootOrder: 28
+  m_RootOrder: 25
 --- !u!1 &996308257
 GameObject:
   m_ObjectHideFlags: 0
@@ -27363,6 +27383,7 @@ MonoBehaviour:
   isLockRequired: 0
   keyItem: {fileID: 0}
   LockedTextShow: Door is locked
+  initangle: 0
 --- !u!1 &1011989739
 GameObject:
   m_ObjectHideFlags: 0
@@ -27746,7 +27767,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11411966, guid: e97ed44f5d5ff0446a5ae0ab13fc2602, type: 2}
       propertyPath: Speed
-      value: 3
+      value: 2.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e97ed44f5d5ff0446a5ae0ab13fc2602, type: 2}
@@ -29511,6 +29532,7 @@ MonoBehaviour:
   isLockRequired: 1
   keyItem: {fileID: 2031341031}
   LockedTextShow: Door is locked
+  initangle: 0
 --- !u!1 &1081366938
 GameObject:
   m_ObjectHideFlags: 0
@@ -33184,6 +33206,7 @@ MonoBehaviour:
   isLockRequired: 1
   keyItem: {fileID: 1951400833}
   LockedTextShow: Door is locked
+  initangle: 0
 --- !u!1 &1223951286
 GameObject:
   m_ObjectHideFlags: 0
@@ -33384,7 +33407,7 @@ Transform:
   m_Children:
   - {fileID: 1989828291}
   m_Father: {fileID: 1417178348}
-  m_RootOrder: 27
+  m_RootOrder: 23
 --- !u!1 &1240014392
 GameObject:
   m_ObjectHideFlags: 0
@@ -33968,6 +33991,7 @@ MonoBehaviour:
   isLockRequired: 0
   keyItem: {fileID: 0}
   LockedTextShow: Door is locked
+  initangle: 0
 --- !u!1 &1266088349
 GameObject:
   m_ObjectHideFlags: 0
@@ -35363,7 +35387,7 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.00001}
+  m_Extents: {x: 0.345, y: 0.5, z: 0.00001}
   m_MoveThreshold: 0.1
   m_Carve: 0
   m_CarveOnlyStationary: 1
@@ -35379,7 +35403,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.9999999, y: 1, z: 6.123233e-17}
+  m_Size: {x: 0.69, y: 1, z: 6.123233e-17}
   m_Center: {x: 0.00000023841858, y: 0, z: 0.0000019073486}
 --- !u!23 &1321283224
 MeshRenderer:
@@ -36339,7 +36363,7 @@ Transform:
   m_Children:
   - {fileID: 2138359345}
   m_Father: {fileID: 451131846}
-  m_RootOrder: 25
+  m_RootOrder: 23
 --- !u!1 &1353270037
 GameObject:
   m_ObjectHideFlags: 0
@@ -36726,6 +36750,7 @@ MonoBehaviour:
   isLockRequired: 1
   keyItem: {fileID: 464680596}
   LockedTextShow: Door is locked
+  initangle: 0
 --- !u!1 &1360104749
 GameObject:
   m_ObjectHideFlags: 0
@@ -38212,14 +38237,14 @@ Transform:
   - {fileID: 1919762614}
   - {fileID: 273894547}
   - {fileID: 1062856166}
-  - {fileID: 220729716}
-  - {fileID: 723001654}
   - {fileID: 967244800}
-  - {fileID: 688827466}
-  - {fileID: 358397975}
   - {fileID: 507213253}
   - {fileID: 1237320272}
+  - {fileID: 220729716}
   - {fileID: 993290504}
+  - {fileID: 723001654}
+  - {fileID: 688827466}
+  - {fileID: 358397975}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!114 &1417178349
@@ -38448,6 +38473,7 @@ MonoBehaviour:
   isLockRequired: 1
   keyItem: {fileID: 788804559}
   LockedTextShow: Door is locked
+  initangle: 0
 --- !u!1 &1427979966
 GameObject:
   m_ObjectHideFlags: 0
@@ -38685,6 +38711,7 @@ MonoBehaviour:
   isLockRequired: 0
   keyItem: {fileID: 0}
   LockedTextShow: Can't leave the room
+  initangle: 0
 --- !u!1001 &1439504868
 Prefab:
   m_ObjectHideFlags: 0
@@ -39069,6 +39096,7 @@ MonoBehaviour:
   isLockRequired: 0
   keyItem: {fileID: 0}
   LockedTextShow: Door is locked
+  initangle: 0
 --- !u!1 &1451000570
 GameObject:
   m_ObjectHideFlags: 0
@@ -41541,6 +41569,7 @@ MonoBehaviour:
   isLockRequired: 0
   keyItem: {fileID: 0}
   LockedTextShow: Door is locked
+  initangle: 0
 --- !u!1 &1539576230
 GameObject:
   m_ObjectHideFlags: 0
@@ -45251,6 +45280,7 @@ MonoBehaviour:
   isLockRequired: 0
   keyItem: {fileID: 0}
   LockedTextShow: Door is locked
+  initangle: 0
 --- !u!1 &1710666301
 GameObject:
   m_ObjectHideFlags: 0
@@ -47278,7 +47308,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11429122, guid: 003ed6648b9d9d4408e857ca3db22f14, type: 2}
       propertyPath: chaseSpeed
-      value: 1.501
+      value: 2.31
       objectReference: {fileID: 0}
     - target: {fileID: 11429122, guid: 003ed6648b9d9d4408e857ca3db22f14, type: 2}
       propertyPath: ArcAngleMin
@@ -47499,6 +47529,7 @@ MonoBehaviour:
   isLockRequired: 0
   keyItem: {fileID: 1472055204}
   LockedTextShow: Door is locked
+  initangle: 0
 --- !u!1 &1800261956
 GameObject:
   m_ObjectHideFlags: 0
@@ -48150,6 +48181,7 @@ MonoBehaviour:
   isLockRequired: 0
   keyItem: {fileID: 0}
   LockedTextShow: Door is locked
+  initangle: 0
 --- !u!1 &1812322412
 GameObject:
   m_ObjectHideFlags: 0
@@ -48194,6 +48226,7 @@ MonoBehaviour:
   isLockRequired: 0
   keyItem: {fileID: 1786782586}
   LockedTextShow: Door is locked
+  initangle: 0
 --- !u!1 &1816689806
 GameObject:
   m_ObjectHideFlags: 0
@@ -48817,6 +48850,68 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1846857247}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1850602412
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1850602413}
+  - 33: {fileID: 1850602416}
+  - 23: {fileID: 1850602414}
+  m_Layer: 0
+  m_Name: Quad
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1850602413
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1850602412}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.745, y: 0.5, z: 1.864}
+  m_LocalScale: {x: 0.5, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 451131846}
+  m_RootOrder: 27
+--- !u!23 &1850602414
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1850602412}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: b74187c0e9afe7c42907eb12c49bdfbe, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &1850602416
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1850602412}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1851357912
 GameObject:
@@ -49873,7 +49968,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2019173154}
-  m_RootOrder: 25
+  m_RootOrder: 24
 --- !u!114 &1883851776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50086,6 +50181,7 @@ MonoBehaviour:
   isLockRequired: 0
   keyItem: {fileID: 0}
   LockedTextShow: DoorIsLocked
+  initangle: 0
 --- !u!1 &1891154121
 GameObject:
   m_ObjectHideFlags: 0
@@ -50286,6 +50382,7 @@ MonoBehaviour:
   isLockRequired: 1
   keyItem: {fileID: 1676260676}
   LockedTextShow: Door Is Locked
+  initangle: 0
 --- !u!1 &1893888480
 GameObject:
   m_ObjectHideFlags: 0
@@ -52801,6 +52898,7 @@ MonoBehaviour:
   isLockRequired: 0
   keyItem: {fileID: 0}
   LockedTextShow: Door is locked
+  initangle: 0
 --- !u!1001 &1971924570
 Prefab:
   m_ObjectHideFlags: 0
@@ -53388,6 +53486,7 @@ MonoBehaviour:
   isLockRequired: 1
   keyItem: {fileID: 1987626501}
   LockedTextShow: Key must be in Ami's belongings.
+  initangle: 0
 --- !u!1001 &1987626499
 Prefab:
   m_ObjectHideFlags: 0
@@ -54396,8 +54495,8 @@ Transform:
   - {fileID: 145475633}
   - {fileID: 877342482}
   - {fileID: 624616768}
-  - {fileID: 1925358589}
   - {fileID: 1883851775}
+  - {fileID: 1925358589}
   - {fileID: 764528146}
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -56855,7 +56954,7 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.00001}
+  m_Extents: {x: 0.39, y: 0.5, z: 0.00001}
   m_MoveThreshold: 0.1
   m_Carve: 0
   m_CarveOnlyStationary: 1
@@ -57582,7 +57681,7 @@ Transform:
   m_Children:
   - {fileID: 466593955}
   m_Father: {fileID: 451131846}
-  m_RootOrder: 19
+  m_RootOrder: 18
 --- !u!1 &2138359344
 GameObject:
   m_ObjectHideFlags: 0
@@ -57671,6 +57770,7 @@ MonoBehaviour:
   isLockRequired: 0
   keyItem: {fileID: 2044193965}
   LockedTextShow: Door is locked
+  initangle: 0
 --- !u!1 &2140081425
 GameObject:
   m_ObjectHideFlags: 0
@@ -57891,7 +57991,7 @@ Transform:
   m_Children:
   - {fileID: 835557831}
   m_Father: {fileID: 451131846}
-  m_RootOrder: 23
+  m_RootOrder: 20
 --- !u!1 &2144949002
 GameObject:
   m_ObjectHideFlags: 0

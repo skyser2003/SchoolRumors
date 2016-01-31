@@ -33,5 +33,9 @@ class GameProgressManager {
         UIObject.GetComponent<AudioSource>().Play();
         Enemy.ResetAll();
         RitualItem.ResetAll();
+        foreach(DoorPuzzleObstacle door in GameObject.FindObjectsOfType<DoorPuzzleObstacle>())
+        {
+            door.Close();
+        }
     }
 }
