@@ -6,6 +6,8 @@ class RitualItem : MonoBehaviour
     public static List<RitualItem> allItems = new List<RitualItem>();
     Vector3 startPos;
 
+    public static bool[] savedItems = new bool[3];
+
     static public bool HaveAllRitualItems(RitualItemInventory inventory, int floorLevel)
     {
         int floorCount = Count(floorLevel);
@@ -34,12 +36,12 @@ class RitualItem : MonoBehaviour
 
     public static void ResetAll()
     {
-        if (VisitRoof.hasVisited)
-            return;
-
         for(int i = 0; i < allItems.Count; ++i)
         {
-            allItems[i].Reset();
+            if (!savedItems[i])
+            {
+                allItems[i].Reset();
+            }
         }
     }
 
