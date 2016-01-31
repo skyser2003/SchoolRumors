@@ -329,8 +329,8 @@ Light:
   serializedVersion: 6
   m_Type: 0
   m_Color: {r: 0.7741674, g: 0.9485294, b: 0.9485294, a: 1}
-  m_Intensity: 1
-  m_Range: 10
+  m_Intensity: 2.1
+  m_Range: 13.510929
   m_SpotAngle: 60
   m_CookieSize: 10
   m_Shadows:
@@ -455,7 +455,7 @@ MonoBehaviour:
   animChaseSpeed: 0
   audioFoot: {fileID: 8299080}
   footStepRate: 0.25
-  PatrolSeeDistance: 2.5
+  PatrolSeeDistance: 3
   DetectedSeeDistance: 5
   ArcAngleMin: 170
   ArcAngleMax: 240
