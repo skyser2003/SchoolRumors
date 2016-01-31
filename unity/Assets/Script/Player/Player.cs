@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 
 class Player : MonoBehaviour {
+    private PlayerUI playerUI;
+
     private RitualItemInventory inventory;
     private HandheldItem handheldItem;
 
@@ -27,6 +29,8 @@ class Player : MonoBehaviour {
             handheldItem.transform.localEulerAngles = new Vector3(0, 0, 0);
             HandheldItemManager.Instance.Remove(handheldItem);
 
+            playerUI.handheldTooltip.text = handheldItem.tooltip;
+
             // Recover original direction
             arm.transform.localScale = new Vector3(direction, 1, 1);
 
@@ -45,6 +49,7 @@ class Player : MonoBehaviour {
 
     private void Start()
     {
+        playerUI = GameObject.FindWithTag("UI").GetComponent<PlayerUI>();
         inventory = GetComponent<RitualItemInventory>();
     }
 
