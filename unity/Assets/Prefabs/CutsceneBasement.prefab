@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 480996}
   - 65: {fileID: 6581934}
   - 114: {fileID: 11466166}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CutsceneBasement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64,7 +64,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 146114}

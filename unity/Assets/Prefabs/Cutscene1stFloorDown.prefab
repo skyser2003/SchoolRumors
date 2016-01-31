@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 453438}
   - 65: {fileID: 6593204}
   - 114: {fileID: 11415106}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cutscene1stFloorDown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80,6 +80,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: cutsceneSlides.Array.data[1].dialog
       value: 'There is no more murderer in this story. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

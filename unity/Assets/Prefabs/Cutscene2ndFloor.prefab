@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 466602}
   - 65: {fileID: 6516842}
   - 114: {fileID: 11453692}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cutscene2ndFloor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,6 +98,10 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: ad3eb9e9d33a1064cb7882aec77c0054,
         type: 3}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 178864}
