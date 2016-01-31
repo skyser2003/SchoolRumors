@@ -159,12 +159,13 @@ public class Enemy : MonoBehaviour
 
     public float PatrolSeeDistance = 10f;
     public float DetectedSeeDistance = 20f;
-
+    public float ArcAngleMin = 40f;
+    public float ArcAngleMax = 220f;
     bool Look()
     {
         RaycastHit hit;
         float seeDistance = currentState == PatrolState.patrol ? PatrolSeeDistance : DetectedSeeDistance;
-        float arcAngle = currentState == PatrolState.patrol ? 40.0f : 220.0f;
+        float arcAngle = currentState == PatrolState.patrol ? ArcAngleMin : ArcAngleMax;
         int numLines = currentState == PatrolState.patrol ? 16 : 64;
         isTouching = false;
 
