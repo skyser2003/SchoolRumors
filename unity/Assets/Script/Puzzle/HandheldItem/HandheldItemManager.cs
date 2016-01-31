@@ -30,6 +30,19 @@ class HandheldItemManager {
 
     public HandheldItem FindClosest(Vector3 pos, float maxDistance)
     {
+        //remove all nulls
+        for (int iter = 0; iter < handheldItemList.Count;)
+        {
+            if (handheldItemList[iter] == null)
+            {
+                handheldItemList.RemoveAt(iter);
+            }
+            else
+            {
+                iter++;
+            }
+        }
+
         HandheldItem closest = null;
         float closestDistance = 0;
 
