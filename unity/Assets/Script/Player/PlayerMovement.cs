@@ -39,7 +39,7 @@ public class PlayerMovement : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        if (Cutscene.isInCutscene)
+        if (Cutscene.isInCutscene || isCrouching)
             return;
 
         var dt = Time.fixedDeltaTime;
@@ -92,9 +92,9 @@ public class PlayerMovement : MonoBehaviour {
 
             audioCrouch.Play();
         }
-        
 
-        if (direction.magnitude > 0.0f)
+
+        if (direction.magnitude > 0.0f && !isCrouching)
         {
             UpdateWalkAnim(animSpeed);
         }
