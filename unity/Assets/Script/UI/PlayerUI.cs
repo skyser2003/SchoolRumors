@@ -26,6 +26,7 @@ public class PlayerUI : MonoBehaviour
     private float gaugeFillTime;
     private float gaugeLeftTime;
 
+    public Text handheldTooltip;
 
     void Awake()
     {
