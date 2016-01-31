@@ -18,11 +18,14 @@ public class PlayerUI : MonoBehaviour
     public GameObject[] ritualItemSprites;
 
     public AudioSource audioDamage;
+    public AudioSource audioGauge;
+    public AudioSource audioGaugeEnd;
 
     private Image gaugeBack;
     private Image gaugeFront;
     private float gaugeFillTime;
     private float gaugeLeftTime;
+
 
     void Awake()
     {
@@ -46,6 +49,7 @@ public class PlayerUI : MonoBehaviour
             gaugeLeftTime -= dt;
 
             if(gaugeLeftTime <= 0) {
+                audioGaugeEnd.Play();
                 CancelGauge();
             }
             else {
@@ -133,6 +137,7 @@ public class PlayerUI : MonoBehaviour
 
     public void SetGaugeFillTime(float time)
     {
+        audioGauge.Play();
         gaugeFillTime = time;
         gaugeLeftTime = time;
         gaugeFront.fillAmount = 0;
@@ -142,6 +147,7 @@ public class PlayerUI : MonoBehaviour
 
     public void CancelGauge()
     {
+        audioGauge.Stop();
         gaugeFillTime = -1;
         gaugeLeftTime = -1;
         gaugeFront.fillAmount = 0;
