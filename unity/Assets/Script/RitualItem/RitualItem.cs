@@ -8,7 +8,7 @@ class RitualItem : MonoBehaviour
 
     public static bool[] savedItems = new bool[3];
 
-    static public bool HaveAllRitualItems(RitualItemInventory inventory, int floorLevel)
+    public static bool HaveAllRitualItems(RitualItemInventory inventory, int floorLevel)
     {
         int floorCount = Count(floorLevel);
         int playerCount = inventory.Count(floorLevel);
@@ -32,12 +32,13 @@ class RitualItem : MonoBehaviour
     void Awake()
     {
         allItems.Add(this);
+        startPos = transform.position;
     }
 
     public static void ResetAll()
     {
-        for(int i = 0; i < allItems.Count; ++i)
-        {
+
+        for (int i = 0; i < allItems.Count; ++i) {
             if (!savedItems[i])
             {
                 allItems[i].Reset();
