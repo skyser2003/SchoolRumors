@@ -124,6 +124,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11452288, guid: 23ba9bc4deecbec4d9b1262b7ecc0653, type: 2}
+      propertyPath: tooltip
+      value: This is not wrench
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 23ba9bc4deecbec4d9b1262b7ecc0653, type: 2}
   m_IsPrefabParent: 0
@@ -532,6 +536,14 @@ Prefab:
     - target: {fileID: 431546, guid: cadf8b876608477458d15fa74253421d, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11467338, guid: cadf8b876608477458d15fa74253421d, type: 2}
+      propertyPath: IsHeldByPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11467338, guid: cadf8b876608477458d15fa74253421d, type: 2}
+      propertyPath: tooltip
+      value: This is key
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cadf8b876608477458d15fa74253421d, type: 2}
@@ -1039,6 +1051,30 @@ Prefab:
     - target: {fileID: 22431946, guid: baa6f48d4df60c84981b741a5118e5c0, type: 2}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22470206, guid: baa6f48d4df60c84981b741a5118e5c0, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -168
+      objectReference: {fileID: 0}
+    - target: {fileID: 22470206, guid: baa6f48d4df60c84981b741a5118e5c0, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 141
+      objectReference: {fileID: 0}
+    - target: {fileID: 11405054, guid: baa6f48d4df60c84981b741a5118e5c0, type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 11405054, guid: baa6f48d4df60c84981b741a5118e5c0, type: 2}
+      propertyPath: m_FontData.m_MinSize
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 22470206, guid: baa6f48d4df60c84981b741a5118e5c0, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 11405054, guid: baa6f48d4df60c84981b741a5118e5c0, type: 2}
+      propertyPath: m_Text
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: baa6f48d4df60c84981b741a5118e5c0, type: 2}
