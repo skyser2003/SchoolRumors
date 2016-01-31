@@ -77,7 +77,7 @@ public class PlayerUI : MonoBehaviour
 
         for (int i = 0; i < 3; ++i)
         {
-            SetRitualItem(i, false);
+            SetRitualItem(i, RitualItem.savedItems[i]);
         }
 
         gaugeBack = transform.FindChild("GaugeBack").GetComponent<Image>();
