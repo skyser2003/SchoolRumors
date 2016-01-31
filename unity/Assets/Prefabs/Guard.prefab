@@ -119,7 +119,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 172878}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25.1, y: 0, z: -0.91}
+  m_LocalPosition: {x: 21.97, y: 0, z: -0.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 437000}
@@ -457,6 +457,8 @@ MonoBehaviour:
   footStepRate: 0.25
   PatrolSeeDistance: 2.5
   DetectedSeeDistance: 5
+  ArcAngleMin: 170
+  ArcAngleMax: 240
   spotlight: {fileID: 445314}
 --- !u!195 &19577906
 NavMeshAgent:

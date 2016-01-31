@@ -17287,6 +17287,14 @@ Prefab:
       propertyPath: wayPoints
       value: 
       objectReference: {fileID: 967244799}
+    - target: {fileID: 11472596, guid: a64e27b4fa3f519469c89071ba0f16f1, type: 2}
+      propertyPath: ArcAngleMin
+      value: 170
+      objectReference: {fileID: 0}
+    - target: {fileID: 11472596, guid: a64e27b4fa3f519469c89071ba0f16f1, type: 2}
+      propertyPath: ArcAngleMax
+      value: 240
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a64e27b4fa3f519469c89071ba0f16f1, type: 2}
   m_IsPrefabParent: 0
@@ -20582,6 +20590,7 @@ MonoBehaviour:
   DelayTime: 1
   EmptyTextShow: No Item
   GainItemObject: {fileID: 1360104749}
+  PlayerSpeedChange: 1.5
 --- !u!1 &855916585
 GameObject:
   m_ObjectHideFlags: 0
@@ -21547,6 +21556,14 @@ Prefab:
       propertyPath: wayPoints
       value: 
       objectReference: {fileID: 1243690461}
+    - target: {fileID: 11472596, guid: a64e27b4fa3f519469c89071ba0f16f1, type: 2}
+      propertyPath: ArcAngleMin
+      value: 170
+      objectReference: {fileID: 0}
+    - target: {fileID: 11472596, guid: a64e27b4fa3f519469c89071ba0f16f1, type: 2}
+      propertyPath: ArcAngleMax
+      value: 240
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a64e27b4fa3f519469c89071ba0f16f1, type: 2}
   m_IsPrefabParent: 0
