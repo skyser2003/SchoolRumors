@@ -11,7 +11,10 @@ public class FieldObject : MonoBehaviour {
     private void Start()
     {
         FieldObjectManager.Instance.Add(this);
-        item.Init(this);
+        if (item != null)
+        {
+            item.Init(this);
+        }
     }
 
     public virtual void Action(Player player)
