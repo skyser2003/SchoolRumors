@@ -53,9 +53,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cutsceneSlides:
-  - image: {fileID: 21300000, guid: 5c0352023b5dd3842a0271a2c8129a14, type: 3}
+  - image: {fileID: 21300000, guid: cc5b524a06b1b264d86319fc50cd71fd, type: 3}
     dialog: 
-  - image: {fileID: 21300000, guid: 5c0352023b5dd3842a0271a2c8129a14, type: 3}
+  - image: {fileID: 21300000, guid: cc5b524a06b1b264d86319fc50cd71fd, type: 3}
     dialog: 'It is non sence, isn''t it? You? granting my wishes? '
   - image: {fileID: 21300000, guid: fa120fcce451322438c5b1fd95389e1a, type: 3}
     dialog: 'You were always nothing but an obstacle to my hope. '
@@ -102,6 +102,16 @@ Prefab:
       propertyPath: m_Layer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: cutsceneSlides.Array.data[1].image
+      value: 
+      objectReference: {fileID: 21300000, guid: cc5b524a06b1b264d86319fc50cd71fd,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: cutsceneSlides.Array.data[0].image
+      value: 
+      objectReference: {fileID: 21300000, guid: cc5b524a06b1b264d86319fc50cd71fd,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 178864}
