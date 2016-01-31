@@ -8365,6 +8365,52 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 355772656}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &358397974
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1417178348}
+    m_Modifications:
+    - target: {fileID: 463476, guid: 00536771d5a0038468f9496d5c87d5cd, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 463476, guid: 00536771d5a0038468f9496d5c87d5cd, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 463476, guid: 00536771d5a0038468f9496d5c87d5cd, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 463476, guid: 00536771d5a0038468f9496d5c87d5cd, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 463476, guid: 00536771d5a0038468f9496d5c87d5cd, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 463476, guid: 00536771d5a0038468f9496d5c87d5cd, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 463476, guid: 00536771d5a0038468f9496d5c87d5cd, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 463476, guid: 00536771d5a0038468f9496d5c87d5cd, type: 2}
+      propertyPath: m_RootOrder
+      value: 29
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 00536771d5a0038468f9496d5c87d5cd, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &358397975 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 463476, guid: 00536771d5a0038468f9496d5c87d5cd, type: 2}
+  m_PrefabInternal: {fileID: 358397974}
 --- !u!1 &359366873
 GameObject:
   m_ObjectHideFlags: 0
@@ -35397,6 +35443,7 @@ Transform:
   - {fileID: 723001654}
   - {fileID: 967244800}
   - {fileID: 688827466}
+  - {fileID: 358397975}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!114 &1417178349
