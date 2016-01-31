@@ -2,7 +2,7 @@
 using System.Collections.ObjectModel;
 using UnityEngine;
 
-class RitualItemInventory : MonoBehaviour {
+public class RitualItemInventory : MonoBehaviour {
     private List<RitualItem> itemList = new List<RitualItem>();
 
     public ReadOnlyCollection<RitualItem> ItemList { get { return itemList.AsReadOnly(); } }

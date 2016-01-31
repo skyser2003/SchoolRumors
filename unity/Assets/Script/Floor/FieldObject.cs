@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-class FieldObject : MonoBehaviour {
+public class FieldObject : MonoBehaviour {
     public RitualItem item;
 
     public int HealAmount;
@@ -13,7 +13,7 @@ class FieldObject : MonoBehaviour {
         FieldObjectManager.Instance.Add(this);
     }
 
-    public void Action(Player player)
+    public virtual void Action(Player player)
     {
         if(item == null && HealAmount == 0)
         {

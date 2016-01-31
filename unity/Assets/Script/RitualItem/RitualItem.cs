@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-class RitualItem : MonoBehaviour
+public class RitualItem : MonoBehaviour
 {
     public static List<RitualItem> allItems = new List<RitualItem>();
     Vector3 startPos;
