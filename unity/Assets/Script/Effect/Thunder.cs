@@ -8,6 +8,7 @@ public class Thunder : MonoBehaviour
     public float speed = 0.1f;
     AudioSource audio;
 
+    public ThunderWindow Window;
     void Start()
     {
         audio = GetComponent<AudioSource>();
@@ -24,6 +25,11 @@ public class Thunder : MonoBehaviour
 
     IEnumerator ThunderAnim()
     {
+        if (Window != null)
+        {
+            Window.ShowGhostWindow();
+        }
+
         Color originalColor = RenderSettings.ambientLight;
         float originalIntensity = RenderSettings.ambientIntensity;
 
@@ -31,6 +37,13 @@ public class Thunder : MonoBehaviour
 
         while(v < 1.0f)
         {
+            if(v > 0.2f)
+            {
+                if (Window != null)
+                {
+                    Window.ShowNormalWindow();
+                }
+            }
             RenderSettings.ambientLight =  Color.Lerp(originalColor, color, curve.Evaluate(v));
             RenderSettings.ambientIntensity = Mathf.Lerp(originalIntensity, 2.0f, curve.Evaluate(v));
             v += Time.deltaTime * speed;
@@ -41,5 +54,6 @@ public class Thunder : MonoBehaviour
         RenderSettings.ambientIntensity = originalIntensity;
 
         gameObject.SetActive(false);
+
     }
 }
